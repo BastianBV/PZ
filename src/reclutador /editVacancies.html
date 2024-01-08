@@ -1,0 +1,1647 @@
+<meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&amp;display=swap">
+    <!-- SIDEBARCSS  -->
+    <style>
+      .visualizacin-de-perfil-candid-child {
+        width: 238px;
+        height: 964px;
+        margin-right: 60px;
+        overflow: hidden;
+        font-size: 14px;
+        color: #313336;
+        font-family: "Inter";
+      }
+
+      .sidebar {
+        background-color: #fff;
+        border-right: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 240px;
+        height: 100%;
+        overflow: hidden;
+        color: #313436;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .container-profile {
+        display: flex;
+        width: 189px;
+        height: 45px;
+        border-radius: 8px;
+        background: var(--grises-300, #e4eaee);
+        padding: 8px 12px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-left: 10px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+
+      .group-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .mara-hernndez-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2px;
+      }
+
+      .mara-hernndez {
+        position: relative;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+      }
+
+      .jmpeoplezonecom {
+        position: relative;
+        font-size: 10px;
+        letter-spacing: -0.01em;
+        color: #898c8f;
+      }
+
+      .vector-css {
+        width: 100%;
+        height: 1px;
+        background-color: #e4eaee;
+      }
+
+      .div6 {
+        width: 240px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .div6:focus {
+        background-color: gray;
+      }
+
+      .keyboard-arrow-down-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+      .arrows-icon {
+        cursor: pointer;
+        width: 21px;
+        height: 21px;
+      }
+      .div1 {
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .div2 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div3 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div4 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div5 {
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+      .container-bottom-btns {
+        width: 100%;
+      }
+      aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+    </style>
+    <style>
+      body {
+        margin: 0;
+        line-height: normal;
+      }
+
+      .arrow-back-icon {
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .buscar-talento-child {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding-top: 30px;
+      }
+      .placeholder {
+        background-color: #fcfdfe;
+        flex: 1;
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        border: none;
+        font-family: "Inter";
+      }
+      .placeholder:focus {
+        outline: none;
+      }
+      .visibility-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+      .placeholder-parent {
+        width: 688px;
+        align-self: stretch;
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 6px 12px;
+        gap: 10px;
+      }
+      .text-fiel {
+        align-self: stretch;
+        width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 16px;
+        color: #898c8f;
+        gap: 16px;
+      }
+      .boton-principal {
+        width: 160px;
+        height: 48px;
+        align-self: stretch;
+        border-radius: 8px;
+        background-color: #589ed6;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.08px;
+        cursor: pointer;
+        border: none;
+      }
+      .boton-principal:hover {
+        background-color: #358fd9;
+        color: #ffffff;
+      }
+      .wrapperall {
+        display: flex;
+        position: absolute;
+      }
+      .buscar-talento {
+        position: relative;
+        letter-spacing: 0.01em;
+        line-height: 24px;
+        font-weight: 600;
+      }
+      .botn-buscar-talento {
+        position: relative;
+        border-radius: 8px;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 160px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        font-size: 16px;
+        color: #589ed6;
+        font-family: Inter;
+        cursor: pointer;
+        background-color: transparent;
+      }
+      .botn-buscar-talento:hover {
+        background-color: #358fd9;
+        color: #ffffff;
+      }
+      .visualizar1 {
+        position: relative;
+        letter-spacing: -0.01em;
+        line-height: 24px;
+        font-weight: 500;
+      }
+      .visualizar {
+        background-color: #fcfdfe;
+        border-bottom: 2px solid #e4eaee;
+        box-sizing: border-box;
+        width: 178px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+      }
+      .visualizar2 {
+        position: relative;
+        letter-spacing: -0.01em;
+        line-height: 24px;
+        font-weight: 600;
+      }
+      .editar {
+        background-color: #fcfdfe;
+        border-bottom: 2px solid #589ed6;
+        box-sizing: border-box;
+        width: 178px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        color: #589ed6;
+      }
+      .tabs {
+        position: relative;
+        background-color: #fcfdfe;
+        border-bottom: 2px solid #e4eaee;
+        box-sizing: border-box;
+        width: 100%;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: #898c8f;
+        font-family: Inter;
+        margin-top: 40px;
+      }
+      .edita-tu-vacante {
+        position: relative;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        line-height: 16px;
+        font-weight: 600;
+        font-family: Inter;
+        color: #505253;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+      .label {
+        align-self: stretch;
+        position: relative;
+        letter-spacing: 0.4px;
+        line-height: 16px;
+      }
+      .placeholder {
+        flex: 1;
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+      }
+      .placeholder-wrapper {
+        align-self: stretch;
+        border-radius: 8px;
+        background-color: #fbfcfc;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        font-size: 16px;
+        color: #818180;
+      }
+      .text-field {
+        width: 574px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 6px;
+      }
+      .text-field1 {
+        width: 277px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 6px;
+      }
+      .descripcin-de-la {
+        flex: 1;
+        position: relative;
+        letter-spacing: 0.01em;
+        line-height: 24px;
+      }
+      .descripcin-de-la-vacante-wrapper {
+        align-self: stretch;
+        border-radius: 8px;
+        background-color: #fbfcfc;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        height: 258px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        font-size: 16px;
+        color: #818180;
+      }
+      .descripcin-de-la-vacante {
+        width: 574px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 6px;
+        color: #313436;
+      }
+      .container-vacante {
+        width: 574px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .vacante {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 48px;
+      }
+      .container-editar {
+        position: relative;
+        border-radius: 10px;
+        background-color: #fcfdfe;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 99%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 12px;
+        color: #141414;
+        font-family: Inter;
+      }
+
+      .botn-buscar-talento-parent {
+        display: flex;
+        gap: 20px;
+      }
+      .container-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .vendedor-tcnico1 {
+        position: relative;
+        font-size: 24px;
+        letter-spacing: 0.5px;
+        line-height: 16px;
+        font-weight: 600;
+        color: #589ed6;
+        display: flex;
+        align-items: center;
+        width: 359px;
+      }
+      .centro-jalisco {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        width: 151px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+      .modalidad {
+        font-weight: 600;
+      }
+      .modalidad-presencial-txt-container {
+        line-break: anywhere;
+        width: 100%;
+      }
+      .modalidad-presencial {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        width: 222px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+      .vendedor-tcnico-parent1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+      }
+      .mxn {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        width: 151px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+      .frame-group {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .periodo-de-pago-container {
+        align-self: stretch;
+        position: relative;
+      }
+      .descripcin {
+        align-self: stretch;
+        position: relative;
+        font-weight: 600;
+      }
+      .responsable-de-interactuar {
+        align-self: stretch;
+        position: relative;
+        font-size: 14px;
+        color: #505253;
+      }
+      .periodo-de-pago-mensual-parent {
+        width: 896px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+      }
+      .habilidades-indispensable-para {
+        position: relative;
+        font-weight: 600;
+        display: inline-block;
+        width: 490px;
+      }
+      .microsoft-exce-intermedio {
+        position: relative;
+      }
+      .microsoft-exce-intermedio-wrapper {
+        border-radius: 30px;
+        background-color: #e6f0f9;
+        border: 1px solid #589ed6;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 10px;
+      }
+      .frame-parent1 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px;
+      }
+      .frame-div {
+        width: 598px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .frame-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 10px;
+        color: #589ed6;
+      }
+      .habilidades-indispensable-para-parent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        font-size: 14px;
+      }
+      .prestaciones-superiores {
+        position: relative;
+        font-size: 14px;
+        font-weight: 600;
+        color: #313436;
+        display: inline-block;
+        width: 490px;
+      }
+      .frame-wrapper2 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .prestaciones-superiores-parent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        font-size: 10px;
+        color: #589ed6;
+      }
+      .frame-container {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        font-size: 16px;
+        color: #313436;
+      }
+      .frame-parent {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 48px;
+      }
+      .container-vacante1 {
+        position: relative;
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        width: 99%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 48px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 18px;
+        color: #202325;
+        font-family: Inter;
+      }
+      .tab {
+        cursor: pointer;
+      }
+
+      .container-created {
+        display: flex;
+        gap: 16px;
+        width: 100%;
+        justify-content: flex-end;
+      }
+      .expira-en-30 {
+        position: relative;
+        line-height: 18px;
+      }
+      .expira-en-30-das-parent {
+        position: relative;
+        border-left: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0px 0px 0px 16px;
+        text-align: left;
+        font-size: 16px;
+        color: #898c8f;
+        font-family: Inter;
+      }
+
+      .creada-el-13 {
+        position: relative;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: Inter;
+        color: #898c8f;
+        text-align: left;
+      }
+      .expira-en-30 {
+        position: relative;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: Inter;
+        color: #898c8f;
+        text-align: left;
+      }
+      .vendedor-tcnico {
+        position: relative;
+        font-size: 22px;
+        letter-spacing: -0.01em;
+        line-height: 24px;
+        font-weight: 600;
+        color: #313436;
+        display: flex;
+        align-items: center;
+        width: 241px;
+      }
+      .centro-jalisco {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        width: 151px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+      .vendedor-tcnico-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px;
+      }
+      .filter-list-icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .filtro {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 16px;
+        font-weight: 600;
+      }
+      .filter-list-parent {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+      .ms-recientes {
+        position: relative;
+        letter-spacing: -0.5px;
+        line-height: 16px;
+        color: var(--grises-500, #898c8f);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+      }
+      .keyboard-arrow-down-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .header {
+        border-radius: 8px;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 178px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+      }
+      .header:focus {
+        border: 2px solid #589ed6;
+      }
+      .ms-recientes1 {
+        position: relative;
+        letter-spacing: -0.5px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        width: 166px;
+        flex-shrink: 0;
+      }
+      .listado-estatus {
+        border-radius: 8px 8px 0px 0px;
+        background-color: #fcfdfe;
+        width: 178px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .listado-estatus1 {
+        background-color: #fcfdfe;
+        width: 178px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .listado-estatus3 {
+        border-radius: 0px 0px 8px 8px;
+        background-color: #fcfdfe;
+        width: 178px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .panel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        color: #202325;
+      }
+      .fechas-candidatos {
+        height: 48px;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: center;
+        color: #898c8f;
+      }
+      .frame-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px;
+        font-size: 16px;
+      }
+      .frame-parent2 {
+        width: 100%;
+        position: relative;
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 24px 54px;
+        text-align: left;
+        font-size: 14px;
+        color: #202325;
+        font-family: Inter;
+        margin-top: 32px;
+      }
+      .nuevo {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 15px;
+        font-weight: 500;
+      }
+      .tags-candidatos {
+        border-radius: 8px;
+        background-color: #589ed6;
+        height: 18px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .pedro-reyes {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        width: 435px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+      .mxn {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        font-weight: 500;
+      }
+      .guadalajara-jalisco-wrapper {
+        border-left: 1px solid #e4eaee;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px;
+      }
+      .mxn-parent {
+        width: 268px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #898c8f;
+      }
+      .pedro-reyes-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px;
+        font-size: 18px;
+        color: #505253;
+      }
+      .tags-candidatos-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+      .candidato {
+        align-self: stretch;
+        background-color: #fcfdfe;
+        border-bottom: 1px solid #e4eaee;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 24px 40px;
+      }
+      .tags-candidatos1 {
+        border-radius: 8px;
+        background-color: #e4eaee;
+        height: 18px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .pedro-reyes-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px;
+        font-size: 18px;
+      }
+      .candidato1 {
+        align-self: stretch;
+        background-color: #fcfdfe;
+        border-bottom: 1px solid #e4eaee;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 24px 40px;
+        color: #505253;
+      }
+      .candidato-parent {
+        width: 100%;
+        position: relative;
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 16px;
+        text-align: left;
+        font-size: 12px;
+        color: #fcfdfe;
+        margin-top: 16px;
+        font-family: Inter;
+      }
+    </style>
+    <style>
+      @media screen and (max-width: 767px) {
+        .visualizacin-de-perfil-candid-child {
+          display: none;
+        }
+        .text-fiel {
+          flex-direction: column;
+          height: auto;
+        }
+        .placeholder-parent {
+          width: 329px;
+        }
+        .boton-principal,
+        .botn-buscar-talento {
+          width: 329px;
+        }
+        .buscar-talento-child {
+          padding-left: 32px;
+        }
+        .editar,
+        .visualizar {
+          width: 87px;
+        }
+        .tabs {
+          width: 327px;
+        }
+        .container-page {
+          align-items: flex-start;
+          margin-bottom: 112px;
+        }
+        .container-vacante1 {
+          width: 82%;
+          padding-left: 23px;
+        }
+        .container-created {
+          width: 79%;
+        }
+        .responsable-de-interactuar {
+          color: var(--grises-700, #505253);
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          width: 275px;
+          align-self: stretch;
+        }
+        .habilidades-indispensable-para {
+          color: var(--grises-800, #313436);
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          width: 361px;
+        }
+        .frame-parent {
+          width: 300px;
+        }
+        .frame-parent1 {
+          width: 50%;
+          flex-wrap: wrap;
+        }
+        .container-editar {
+          padding-left: 10px;
+          width: 85%;
+        }
+        .vacante {
+          align-items: flex-start;
+        }
+        .container-vacante {
+          width: 282px;
+        }
+        .botn-buscar-talento-parent {
+          flex-direction: column-reverse;
+        }
+        .frame-parent2 {
+          width: 344px;
+          padding: 16px 8px;
+          margin-bottom: 40px;
+          height: 120px;
+        }
+        .vendedor-tcnico {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+          width: 151px;
+        }
+        .centro-jalisco {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          letter-spacing: 0.5px;
+        }
+        .filtro {
+          color: var(--grises-900, #202325);
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 16px; /* 100% */
+          letter-spacing: 0.5px;
+        }
+        .fechas-candidatos,
+        .ms-recientes {
+          width: 141px;
+        }
+        .candidato-parent {
+          width: 89%;
+          padding: 0px;
+        }
+        .candidato,
+        .candidato1 {
+          padding: 24px 24px;
+        }
+        .pedro-reyes {
+          width: auto;
+        }
+        .mxn-parent {
+          width: 305px;
+        }
+      }
+    </style>
+  
+  
+    <div class="wrapperall">
+      <!-- SIDEBAR -->
+      <div class="visualizacin-de-perfil-candid-child">
+        <aside class="sidebar">
+          <div class="wrapper-all">
+            <div class="container-profile">
+              <img class="group-icon" alt="" src="/content/genpub/assets/ImgProfile.svg"/>
+              <div class="mara-hernndez-parent">
+                <div class="mara-hernndez">María Hernández</div>
+                <div class="jmpeoplezonecom">jm@peoplezone.com</div>
+              </div>
+            </div>
+            <div class="vector-css"></div>
+            <div class="container-top-btns">
+              <div class="div6">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/homeNavBar.svg"/>
+
+                <div class="div">Inicio</div>
+              </div>
+              <div class="div1">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/List.svg"/>
+
+                <div class="div">Mis Vacantes</div>
+              </div>
+              <div class="div5">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/credits.svg"/>
+
+                <div class="div">Créditos</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-bottom-btns">
+            <div class="vector-css"></div>
+
+            <div class="div2">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/settings.svg"/>
+
+              <div class="div">Configuración</div>
+            </div>
+            <div class="div3">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/help.svg"/>
+
+              <div class="div">Ayuda</div>
+            </div>
+            <div class="div4">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/exit.svg"/>
+
+              <div class="div">Salir</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="buscar-talento">
+        <div class="buscar-talento-child">
+          <img class="arrow-back-icon" alt="" src="/content/genpub/assets/back-arrow.svg"/>
+
+          <div class="text-fiel">
+            <div class="placeholder-parent">
+              <input class="placeholder" placeholder="Buscar vacante"/>
+              <img class="visibility-icon" alt="" src="/content/genpub/assets/search.svg"/>
+            </div>
+            <buton class="boton-principal">
+              <div class="siguiente">Crear vacante</div>
+            </buton>
+            <button class="botn-buscar-talento" type="submit" value="" name="">
+              <div class="buscar-talento">Buscar talento</div>
+            </button>
+          </div>
+          <div class="tabs tab-perfil-candidato">
+            <div class="editar visualizar1 tab" onclick="mostrarPagina('page1'); seleccionarTab(this);">
+              Visualizar
+            </div>
+            <div class="visualizar visualizar2 tab" onclick="mostrarPagina('page2'); seleccionarTab(this);">
+              Editar
+            </div>
+            <div class="visualizar visualizar1 tab" onclick="mostrarPagina('page3'); seleccionarTab(this);">
+              Candidatos
+            </div>
+          </div>
+
+          <div class="container-page page" id="page1" style="display: flex; gap: 16px; margin-top: 32px">
+            <div class="container-created">
+              <div class="creada-el-13">Creada el 13 de Julio</div>
+              <div class="expira-en-30">Expira en 30 días</div>
+            </div>
+
+            <div class="container-vacante1">
+              <div class="frame-parent">
+                <div class="frame-group">
+                  <div class="vendedor-tcnico-parent1">
+                    <div class="vendedor-tcnico1">Vendedor técnico</div>
+                    <div class="centro-jalisco">Centro, Jalisco</div>
+                    <div class="modalidad-presencial">
+                      <span class="modalidad-presencial-txt-container">
+                        <span class="modalidad">Modalidad:</span>
+                        <span> Presencial</span>
+                      </span>
+                    </div>
+                    <div class="modalidad-presencial">
+                      <span class="modalidad-presencial-txt-container">
+                        <span class="modalidad">Experiencia:</span>
+                        <span> 2 años</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mxn">$8,000 MXN</div>
+                </div>
+                <div class="frame-container">
+                  <div class="periodo-de-pago-mensual-parent">
+                    <div class="periodo-de-pago-container">
+                      <span class="modalidad">Periodo de pago: </span>
+                      <span>Mensual</span>
+                    </div>
+                    <div class="periodo-de-pago-container">
+                      <span class="modalidad">Jornada: </span>
+                      <span>Tiempo Completo</span>
+                    </div>
+                    <div class="periodo-de-pago-container">
+                      <span class="modalidad">Tipo de contratación:</span>
+                      <span> Indefinido</span>
+                    </div>
+                    <div class="descripcin">Descripción:</div>
+                    <div class="responsable-de-interactuar">
+                      Responsable de interactuar directamente con los clientes y
+                      brindarles un excelente servicio para promover las ventas
+                      y el crecimiento del negocio. Tu objetivo principal será
+                      comprender las necesidades de los clientes y ofrecerles
+                      productos o servicios que satisfagan sus requerimientos.
+                    </div>
+                  </div>
+                  <div class="habilidades-indispensable-para-parent">
+                    <div class="habilidades-indispensable-para">
+                      Habilidades indispensable para la posición
+                    </div>
+                    <div class="frame-wrapper">
+                      <div class="frame-div">
+                        <div class="frame-div">
+                          <div class="frame-parent1">
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Microsoft Exce/ Intermedio
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Excel / Avanzado
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Canva/ Básico
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Google / Avanzado
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prestaciones-superiores-parent">
+                    <div class="prestaciones-superiores">
+                      Prestaciones superiores
+                    </div>
+                    <div class="frame-wrapper2">
+                      <div class="frame-div">
+                        <div class="frame-div">
+                          <div class="frame-parent1">
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Vacaciones/Días de descanso extra
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Vales de despensa
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Fondo de ahoro
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">Bonos</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="frame-wrapper2">
+                      <div class="frame-div">
+                        <div class="frame-div">
+                          <div class="frame-parent1">
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Capacitaciones/certificaciones
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Estacionamiento
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Uniforme
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Tarjetas de Regalo
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="frame-wrapper2">
+                      <div class="frame-div">
+                        <div class="frame-div">
+                          <div class="frame-parent1">
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Seguro de Gastos Médicos mayores
+                              </div>
+                            </div>
+                            <div class="microsoft-exce-intermedio-wrapper">
+                              <div class="microsoft-exce-intermedio">
+                                Seguro Dental
+                              </div>
+                            </div>
+                            <div class="frame-wrapper2">
+                              <div class="microsoft-exce-intermedio-wrapper">
+                                <div class="microsoft-exce-intermedio">
+                                  Comedor
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-page page" id="page2" style="display: none">
+            <div class="edita-tu-vacante">Edita tu vacante</div>
+
+            <div class="container-editar">
+              <div class="vacante">
+                <div class="container-vacante">
+                  <div class="text-field">
+                    <div class="label">Título de la vacante</div>
+                    <input class="placeholder-wrapper placeholder" placeholder="Vendedor Técnico"/>
+                  </div>
+                  <div class="text-field">
+                    <div class="label">Ubicación</div>
+                    <input class="placeholder-wrapper placeholder" placeholder="Centro Jalisco"/>
+                  </div>
+                  <div class="text-field1">
+                    <div class="label">Sueldo</div>
+                    <input class="placeholder-wrapper placeholder" placeholder="$8,000 MXN"/>
+                  </div>
+                  <div class="text-field1">
+                    <div class="label">Periodo de pago</div>
+                    <input class="placeholder-wrapper placeholder" placeholder="Semanal"/>
+                  </div>
+                  <div class="text-field1">
+                    <div class="label">Tipo de contratación</div>
+                    <input class="placeholder-wrapper placeholder" placeholder="Permanente"/>
+                  </div>
+                  <div class="text-field1">
+                    <div class="label">Turno</div>
+                    <input class="placeholder-wrapper placeholder" placeholder="Tiempo completo"/>
+                  </div>
+                  <div class="text-field1">
+                    <div class="label">Estudios</div>
+                    <input class="placeholder-wrapper placeholder" placeholder="Licenciatura"/>
+                  </div>
+                  <div class="text-field1">
+                    <div class="label">Prestaciones</div>
+                    <input class="placeholder-wrapper placeholder" placeholder="Prestaciones de Ley "/>
+                  </div>
+                  <div class="text-field">
+                    <div class="label">Habilidades</div>
+                    <input class="placeholder-wrapper placeholder" placeholder="Inglés, excel"/>
+                  </div>
+                  <div class="descripcin-de-la-vacante">
+                    <div class="label">Descripción</div>
+                    <textarea class="descripcin-de-la-vacante-wrapper placeholder" placeholder="Como vendedor técnico, serás responsable de ofrecer soluciones técnicas a los clientes, brindar asesoramiento especializado y cerrar ventas. Trabajarás en estrecha colaboración con el equipo de ventas para cumplir con los objetivos establecidos y proporcionar un excelente servicio al cliente."></textarea>
+                  </div>
+                </div>
+                <div class="botn-buscar-talento-parent">
+                  <button class="botn-buscar-talento buscar-talento" type="submit" value="" name="">
+                    Cancelar
+                  </button>
+                  <div class="boton-atrs">
+                    <button class="boton-principal buscar-talento" type="submit" value="" name="">
+                      Guardar cambios
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-page page" id="page3" style="display: none">
+            <div class="frame-parent2">
+              <div class="vendedor-tcnico-parent">
+                <div class="vendedor-tcnico">Vendedor Técnico</div>
+                <div class="centro-jalisco">Centro, Jalisco</div>
+                <div class="centro-jalisco">$8,000 MXN</div>
+              </div>
+              <div class="frame-group">
+                <div class="filter-list-parent">
+                  <img class="filter-list-icon" alt="" src="/content/genpub/assets/filtro.svg"/>
+                  <div class="filtro">Filtro</div>
+                </div>
+                <div class="fechas-candidatos">
+                  <select class="header ms-recientes">
+                    <option>Más recientes</option>
+                    <option>Una semana</option>
+                    <option>Un Mes</option>
+                    <option>3 meses</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="candidato-parent">
+              <div class="candidato">
+                <div class="tags-candidatos-parent">
+                  <div class="tags-candidatos">
+                    <div class="nuevo">Nuevo</div>
+                  </div>
+                  <div class="pedro-reyes-parent">
+                    <b class="pedro-reyes">Pedro Reyes</b>
+                    <div class="mxn-parent">
+                      <div class="mxn">$9,000 MXN</div>
+                      <div class="guadalajara-jalisco-wrapper">
+                        <div class="mxn">Guadalajara, Jalisco</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="candidato1">
+                <div class="tags-candidatos-parent">
+                  <div class="tags-candidatos1">
+                    <div class="nuevo">Visualizado</div>
+                  </div>
+                  <div class="pedro-reyes-group">
+                    <b class="pedro-reyes">Rocío Martínez</b>
+                    <div class="mxn-parent">
+                      <div class="mxn">$9,000 MXN</div>
+                      <div class="guadalajara-jalisco-wrapper">
+                        <div class="mxn">Guadalajara, Jalisco</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="candidato1">
+                <div class="tags-candidatos-parent">
+                  <div class="tags-candidatos1">
+                    <div class="nuevo">Visualizado</div>
+                  </div>
+                  <div class="pedro-reyes-group">
+                    <b class="pedro-reyes">Fernando Ramírez</b>
+                    <div class="mxn-parent">
+                      <div class="mxn">$9,000 MXN</div>
+                      <div class="guadalajara-jalisco-wrapper">
+                        <div class="mxn">Guadalajara, Jalisco</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="candidato">
+                <div class="tags-candidatos-parent">
+                  <div class="tags-candidatos">
+                    <div class="nuevo">Nuevo</div>
+                  </div>
+                  <div class="pedro-reyes-parent">
+                    <b class="pedro-reyes">Rebeca Torres</b>
+                    <div class="mxn-parent">
+                      <div class="mxn">$9,000 MXN</div>
+                      <div class="guadalajara-jalisco-wrapper">
+                        <div class="mxn">Guadalajara, Jalisco</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="candidato">
+                <div class="tags-candidatos-parent">
+                  <div class="tags-candidatos">
+                    <div class="nuevo">Nuevo</div>
+                  </div>
+                  <div class="pedro-reyes-parent">
+                    <b class="pedro-reyes">Ana Gómez</b>
+                    <div class="mxn-parent">
+                      <div class="mxn">$9,000 MXN</div>
+                      <div class="guadalajara-jalisco-wrapper">
+                        <div class="mxn">Guadalajara, Jalisco</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="candidato1">
+                <div class="tags-candidatos-parent">
+                  <div class="tags-candidatos1">
+                    <div class="nuevo">Visualizado</div>
+                  </div>
+                  <div class="pedro-reyes-group">
+                    <b class="pedro-reyes">Tania Mosqueda</b>
+                    <div class="mxn-parent">
+                      <div class="mxn">$9,000 MXN</div>
+                      <div class="guadalajara-jalisco-wrapper">
+                        <div class="mxn">Guadalajara, Jalisco</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="candidato">
+                <div class="tags-candidatos-parent">
+                  <div class="tags-candidatos">
+                    <div class="nuevo">Nuevo</div>
+                  </div>
+                  <div class="pedro-reyes-parent">
+                    <b class="pedro-reyes">Carolina Sánchez</b>
+                    <div class="mxn-parent">
+                      <div class="mxn">$9,000 MXN</div>
+                      <div class="guadalajara-jalisco-wrapper">
+                        <div class="mxn">Guadalajara, Jalisco</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="candidato">
+                <div class="tags-candidatos-parent">
+                  <div class="tags-candidatos">
+                    <div class="nuevo">Nuevo</div>
+                  </div>
+                  <div class="pedro-reyes-parent">
+                    <b class="pedro-reyes">Daniel Macedo</b>
+                    <div class="mxn-parent">
+                      <div class="mxn">$9,000 MXN</div>
+                      <div class="guadalajara-jalisco-wrapper">
+                        <div class="mxn">Guadalajara, Jalisco</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer  -->
+      </div>
+    </div>
+    <script>
+      function mostrarPagina(idPaginaMostrar) {
+        var paginas = document.querySelectorAll(".page");
+        for (var i = 0; i < paginas.length; i++) {
+          paginas[i].style.display = "none";
+        }
+
+        var paginaMostrar = document.getElementById(idPaginaMostrar);
+        if (paginaMostrar) {
+          paginaMostrar.style.display = "flex";
+        }
+      }
+
+      function seleccionarTab(tabSeleccionado) {
+        var tabs = document.querySelectorAll(".tab-perfil-candidato div");
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].style.borderBottom = "2px solid #e4eaee";
+        }
+
+        tabSeleccionado.style.borderBottom = "2px solid #589ed6";
+      }
+    </script>
+  

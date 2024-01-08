@@ -1,0 +1,622 @@
+<meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&amp;display=swap">
+    <!-- SIDEBARCSS  -->
+    <style>
+      .visualizacin-de-perfil-candid-child {
+        width: 262px;
+        height: 964px;
+        overflow: hidden;
+        font-size: 14px;
+        color: #313336;
+        font-family: "Inter";
+      }
+
+      .sidebar {
+        background-color: #fff;
+        border-right: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 240px;
+        height: 100%;
+        overflow: hidden;
+        color: #313436;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .container-profile {
+        display: flex;
+        width: 189px;
+        height: 45px;
+        border-radius: 8px;
+        background: var(--grises-300, #e4eaee);
+        padding: 8px 12px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-left: 10px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+
+      .group-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .mara-hernndez-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2px;
+      }
+
+      .mara-hernndez {
+        position: relative;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+      }
+
+      .jmpeoplezonecom {
+        position: relative;
+        font-size: 10px;
+        letter-spacing: -0.01em;
+        color: #898c8f;
+      }
+
+      .vector-css {
+        width: 100%;
+        height: 1px;
+        background-color: #e4eaee;
+      }
+
+      .div6 {
+        width: 240px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .div6:focus {
+        background-color: gray;
+      }
+
+      .keyboard-arrow-down-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+      .arrows-icon {
+        cursor: pointer;
+        width: 21px;
+        height: 21px;
+      }
+      .div1 {
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .div2 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div3 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div4 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div5 {
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+      .container-bottom-btns {
+        width: 100%;
+      }
+      aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+    </style>
+    <style>
+      body {
+        margin: 0;
+        line-height: normal;
+      }
+
+      .arrow-back-icon {
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+      }
+      .buscar-talento-child {
+        width: auto;
+        height: 964px;
+        overflow: hidden;
+        padding-left: 80px;
+        padding-top: 30px;
+      }
+      .placeholder {
+        background-color: #fcfdfe;
+        flex: 1;
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        border: none;
+        font-family: "Inter";
+      }
+      .placeholder:focus {
+        outline: none;
+      }
+      .visibility-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+      .placeholder-parent {
+        width: 688px;
+        align-self: stretch;
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 6px 12px;
+        gap: 10px;
+      }
+      .text-fiel {
+        align-self: stretch;
+        width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 16px;
+        color: #898c8f;
+        gap: 16px;
+        margin-top: 30px;
+      }
+      .boton-principal {
+        width: 160px;
+        align-self: stretch;
+        border-radius: 8px;
+        background-color: #589ed6;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        color: #fff;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.08px;
+        cursor: pointer;
+      }
+      .boton-principal:hover {
+        background-color: #358fd9;
+        color: #ffffff;
+      }
+      .wrapperall {
+        display: flex;
+      }
+      .buscar-talento {
+        position: relative;
+        letter-spacing: 0.01em;
+        line-height: 24px;
+        font-weight: 600;
+      }
+      .botn-buscar-talento {
+        position: relative;
+        background-color: transparent;
+        border-radius: 8px;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 160px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        text-align: left;
+        font-size: 16px;
+        color: #589ed6;
+        font-family: Inter;
+        cursor: pointer;
+      }
+
+      .botn-buscar-talento:hover {
+        background-color: #358fd9;
+        color: #ffffff;
+      }
+      .resultados-de-la {
+        position: relative;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        line-height: 24px;
+        font-family: Inter;
+        color: #898c8f;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        width: 409px;
+        height: 18px;
+        margin-top: 32px;
+        margin-bottom: 40px;
+      }
+      .vendedor-tcnico {
+        align-self: stretch;
+        position: relative;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #313436;
+      }
+      .centro-jalisco {
+        align-self: stretch;
+        position: relative;
+        line-height: 20px;
+      }
+      .vendedor-tcnico-parent {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .hace-30-das {
+        flex: 1;
+        position: relative;
+      }
+      .hace-30-das-wrapper {
+        width: 151px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 0px;
+        box-sizing: border-box;
+        text-align: right;
+        color: #589ed6;
+      }
+      .frame-parent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .resultado-de-la-bsqueda {
+        position: relative;
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px 40px;
+        text-align: left;
+        font-size: 14px;
+        color: #505253;
+        font-family: Inter;
+        cursor: pointer;
+      }
+      .resultado-de-la-bsqueda:hover {
+        border: 1px solid #589ed6;
+      }
+      .wrapper-search {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .wrapper-btn {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+      }
+    </style>
+    <style>
+      @media screen and (max-width: 767px) {
+        .visualizacin-de-perfil-candid-child {
+          display: none;
+        }
+        .buscar-talento-child {
+          padding-left: 26px;
+        }
+        .text-fiel {
+          flex-direction: column;
+          height: auto;
+          width: 289px;
+        }
+        .wrapper-btn {
+          display: flex;
+          flex-direction: column;
+          width: auto;
+        }
+        .placeholder-parent {
+          width: 281px;
+        }
+        .boton-principal {
+          width: 259px;
+        }
+        .botn-buscar-talento {
+          width: 281px;
+        }
+        .resultados-de-la {
+          display: flex;
+          width: 283px;
+          height: 18px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          color: var(--grises-500, #898c8f);
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px; /* 171.429% */
+          letter-spacing: -0.14px;
+        }
+        .resultado-de-la-bsqueda {
+          padding: 16px 24px;
+          width: 280px;
+        }
+        .hace-30-das-wrapper {
+          display: flex;
+          width: 87px;
+          padding: 10px 0px;
+          align-items: center;
+          gap: 10px;
+          color: var(--principal-300, #589ed6);
+          text-align: right;
+          font-family: "Inter";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          flex: 1 0 0;
+        }
+        .vendedor-tcnico {
+          font-size: 13px;
+        }
+        .centro-jalisco {
+          color: var(--grises-700, #505253);
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+          letter-spacing: 0.035px;
+          align-self: stretch;
+        }
+      }
+    </style>
+  
+  
+    <div class="wrapperall">
+      <!-- SIDEBAR -->
+      <div class="visualizacin-de-perfil-candid-child">
+        <aside class="sidebar">
+          <div class="wrapper-all">
+            <div class="container-profile">
+              <img class="group-icon" alt="" src="/content/genpub/assets/ImgProfile.svg"/>
+              <div class="mara-hernndez-parent">
+                <div class="mara-hernndez">María Hernández</div>
+                <div class="jmpeoplezonecom">jm@peoplezone.com</div>
+              </div>
+            </div>
+            <div class="vector-css"></div>
+            <div class="container-top-btns">
+              <div class="div6">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/homeNavBar.svg"/>
+
+                <div class="div">Inicio</div>
+              </div>
+              <div class="div1">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/List.svg"/>
+
+                <div class="div">Mis Vacantes</div>
+              </div>
+              <div class="div5">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/credits.svg"/>
+
+                <div class="div">Créditos</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-bottom-btns">
+            <div class="vector-css"></div>
+
+            <div class="div2">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/settings.svg"/>
+
+              <div class="div">Configuración</div>
+            </div>
+            <div class="div3">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/help.svg"/>
+
+              <div class="div">Ayuda</div>
+            </div>
+            <div class="div4">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/exit.svg"/>
+
+              <div class="div">Salir</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="buscar-talento">
+        <div class="buscar-talento-child">
+          <img class="arrow-back-icon" alt="" src="/content/genpub/assets/back-arrow.svg"/>
+
+          <div class="text-fiel">
+            <div class="placeholder-parent">
+              <input class="placeholder" placeholder="Buscar vacante"/>
+              <img class="visibility-icon" alt="" src="/content/genpub/assets/search.svg"/>
+            </div>
+            <div class="wrapper-btn">
+              <buton class="boton-principal">
+                <div class="siguiente">Crear vacante</div>
+              </buton>
+              <button class="botn-buscar-talento" type="submit" value="" name="">
+                <div class="buscar-talento">Buscar talento</div>
+              </button>
+            </div>
+          </div>
+          <div class="resultados-de-la">
+            Resultados de la búsqueda de “Vendedor”
+          </div>
+          <div class="wrapper-search">
+            <div class="resultado-de-la-bsqueda">
+              <div class="frame-parent">
+                <div class="vendedor-tcnico-parent">
+                  <div class="vendedor-tcnico">Vendedor técnico</div>
+                  <div class="centro-jalisco">Centro, Jalisco</div>
+                  <div class="centro-jalisco">$8,000 MXN</div>
+                </div>
+                <div class="hace-30-das-wrapper">
+                  <div class="hace-30-das">Hace 30 días</div>
+                </div>
+              </div>
+            </div>
+            <div class="resultado-de-la-bsqueda">
+              <div class="frame-parent">
+                <div class="vendedor-tcnico-parent">
+                  <div class="vendedor-tcnico">Vendedor técnico</div>
+                  <div class="centro-jalisco">Centro, Jalisco</div>
+                  <div class="centro-jalisco">$8,000 MXN</div>
+                </div>
+                <div class="hace-30-das-wrapper">
+                  <div class="hace-30-das">Hace 30 días</div>
+                </div>
+              </div>
+            </div>
+            <div class="resultado-de-la-bsqueda">
+              <div class="frame-parent">
+                <div class="vendedor-tcnico-parent">
+                  <div class="vendedor-tcnico">Vendedor técnico</div>
+                  <div class="centro-jalisco">Centro, Jalisco</div>
+                  <div class="centro-jalisco">$8,000 MXN</div>
+                </div>
+                <div class="hace-30-das-wrapper">
+                  <div class="hace-30-das">Hace 30 días</div>
+                </div>
+              </div>
+            </div>
+            <div class="resultado-de-la-bsqueda">
+              <div class="frame-parent">
+                <div class="vendedor-tcnico-parent">
+                  <div class="vendedor-tcnico">Vendedor técnico</div>
+                  <div class="centro-jalisco">Centro, Jalisco</div>
+                  <div class="centro-jalisco">$8,000 MXN</div>
+                </div>
+                <div class="hace-30-das-wrapper">
+                  <div class="hace-30-das">Hace 30 días</div>
+                </div>
+              </div>
+            </div>
+            <div class="resultado-de-la-bsqueda">
+              <div class="frame-parent">
+                <div class="vendedor-tcnico-parent">
+                  <div class="vendedor-tcnico">Vendedor técnico</div>
+                  <div class="centro-jalisco">Centro, Jalisco</div>
+                  <div class="centro-jalisco">$8,000 MXN</div>
+                </div>
+                <div class="hace-30-das-wrapper">
+                  <div class="hace-30-das">Hace 30 días</div>
+                </div>
+              </div>
+            </div>
+            <div class="resultado-de-la-bsqueda">
+              <div class="frame-parent">
+                <div class="vendedor-tcnico-parent">
+                  <div class="vendedor-tcnico">Vendedor técnico</div>
+                  <div class="centro-jalisco">Centro, Jalisco</div>
+                  <div class="centro-jalisco">$8,000 MXN</div>
+                </div>
+                <div class="hace-30-das-wrapper">
+                  <div class="hace-30-das">Hace 30 días</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer  -->
+      </div>
+    </div>
+  

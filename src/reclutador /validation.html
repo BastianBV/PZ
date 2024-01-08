@@ -1,0 +1,1647 @@
+
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&amp;display=swap">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <style>
+      .visualizacin-de-perfil-candid-child {
+        width: 320px;
+        height: 964px;
+        overflow: hidden;
+      }
+
+      .label {
+        letter-spacing: -0.5px;
+        line-height: 16px;
+        font-weight: 500;
+        display: none;
+        align-items: center;
+        width: 312px;
+      }
+
+      .texto-de-apoyo {
+        flex: 1;
+        position: relative;
+        letter-spacing: 0.4px;
+        line-height: 16px;
+        display: none;
+      }
+
+      .texto-de-apoyo-para-inputs-wrapper {
+        position: absolute;
+        top: 519px;
+        left: 1154px;
+        width: 312px;
+        display: none;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0px 8px;
+        box-sizing: border-box;
+        font-size: 10px;
+        color: #141414;
+      }
+
+      .arrow-back-icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      .user-icon {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+
+      .rea-comercial {
+        position: relative;
+        line-height: 18px;
+      }
+
+      .rea-comercial-ejecutivo-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .hombre {
+        position: relative;
+        line-height: 12px;
+      }
+
+      .aos {
+        position: relative;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        width: 52px;
+        flex-shrink: 0;
+      }
+
+      .aos-wrapper {
+        border-left: 1px solid #e4eaee;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px 0px 16px;
+        text-align: right;
+      }
+
+      .hombre-parent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 14px;
+      }
+
+      .frame-parent2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .user-parent {
+        border-bottom: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 277px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 16px;
+        gap: 16px;
+      }
+
+      .ubicacin {
+        align-self: stretch;
+        position: relative;
+        line-height: 24px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        height: 14px;
+        flex-shrink: 0;
+      }
+
+      .lvaro-obregn-cdmx {
+        align-self: stretch;
+        position: relative;
+        font-size: 16px;
+        line-height: 24px;
+        color: #202325;
+      }
+
+      .container-ubicacin {
+        width: 193px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .container-texto {
+        width: 277px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        box-sizing: border-box;
+        gap: 16px;
+        font-size: 12px;
+      }
+
+      .frame-parent1 {
+        width: 277px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 24px;
+        box-sizing: border-box;
+        gap: 16px;
+      }
+
+      .buscar-talento {
+        position: relative;
+        letter-spacing: 0.01em;
+        line-height: 24px;
+        font-weight: 600;
+      }
+
+      .botn-buscar-talento {
+        border-radius: 8px;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 240px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background-color: transparent;
+        color: var(--principal-300, #589ed6);
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.08px;
+        cursor: pointer;
+      }
+      .botn-buscar-talento:hover {
+        background-color: #589ed6;
+        color: #ffffff;
+      }
+      .se-utilizar-1 {
+        position: relative;
+        font-size: 14px;
+        letter-spacing: 0.25px;
+        line-height: 16px;
+        font-weight: 500;
+        color: #898c8f;
+        text-align: center;
+      }
+
+      .botn-buscar-talento-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        color: #589ed6;
+      }
+
+      .boton-principal {
+        align-self: stretch;
+        flex: 1;
+        border-radius: 8px;
+        background-color: #589ed6;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 32px;
+        border: none;
+        color: #fff;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.08px;
+        cursor: pointer;
+      }
+
+      .boton-principal:hover {
+        background-color: #1f7fce;
+      }
+      .boton-atrs {
+        width: 240px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        color: #fff;
+      }
+
+      .frame-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 24px;
+      }
+
+      .placeholder {
+        flex: 1;
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+      }
+
+      .placeholder-wrapper {
+        align-self: stretch;
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 6px 12px;
+        flex: 1;
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        color: var(--grises-500, #898c8f);
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+      }
+
+      .placeholder-wrapper:focus {
+        border: 1px solid #589ed6;
+        outline: none;
+      }
+
+      .text-fiel {
+        width: 402px;
+        height: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .pendiente {
+        position: relative;
+        letter-spacing: -0.5px;
+        line-height: 16px;
+      }
+
+      .keyboard-arrow-down-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .header {
+        border-radius: 8px;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 178px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        color: var(--grises-500, #898c8f);
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: -0.5px;
+        cursor: pointer;
+      }
+
+      .ms-recientes {
+        position: relative;
+        letter-spacing: -0.5px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        width: 166px;
+        flex-shrink: 0;
+      }
+
+      .listado-estatus {
+        border-radius: 8px 8px 0px 0px;
+        background-color: #fcfdfe;
+        width: 178px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      .listado-estatus1 {
+        background-color: #fcfdfe;
+        width: 178px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      .listado-estatus3 {
+        border-radius: 0px 0px 8px 8px;
+        background-color: #fcfdfe;
+        width: 178px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      .panel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        color: #202325;
+      }
+
+      .estatus {
+        height: 48px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: center;
+      }
+
+      .text-fiel-parent {
+        border-bottom: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 673px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 24px 16px 40px;
+      }
+
+      .visualizar {
+        position: relative;
+        letter-spacing: -0.01em;
+        line-height: 24px;
+        font-weight: 600;
+        border-bottom: none !important;
+      }
+
+      .tab {
+        background-color: #fcfdfe;
+        border-bottom: 2px solid #589ed6;
+        box-sizing: border-box;
+        width: 222px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        color: #589ed6;
+        cursor: pointer;
+      }
+
+      .visualizar1 {
+        position: relative;
+        letter-spacing: -0.01em;
+        line-height: 24px;
+        font-weight: 500;
+        border-bottom: none !important;
+      }
+
+      .tab1 {
+        background-color: #fcfdfe;
+        border-bottom: 2px solid #e4eaee;
+        box-sizing: border-box;
+        width: 222px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .tab2 {
+        background-color: #fcfdfe;
+        border-bottom: 2px solid #e4eaee;
+        box-sizing: border-box;
+        width: 222px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .tab-perfil-candidato {
+        /* align-self: stretch; */
+        background-color: #fcfdfe;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .tab-perfil-candidato-wrapper {
+        width: 672px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .cv-1125896pdf {
+        position: relative;
+        letter-spacing: 0.25px;
+        line-height: 16px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .actualizado-hace-3 {
+        position: relative;
+        font-size: 12px;
+        letter-spacing: 0.25px;
+        line-height: 16px;
+        font-weight: 500;
+        color: #898c8f;
+      }
+
+      .container-texto1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0px 40px;
+        gap: 6px;
+      }
+
+      .experiencia-laboral {
+        position: relative;
+        letter-spacing: 0.25px;
+        line-height: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        width: 277px;
+      }
+
+      .vendedor-de-cambaceo1 {
+        position: relative;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        width: 276px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+
+      .febrero-2019- {
+        position: relative;
+        font-size: 12px;
+        line-height: 16px;
+        color: #898c8f;
+        display: flex;
+        align-items: center;
+        width: 276px;
+        height: 12px;
+        flex-shrink: 0;
+      }
+
+      .vendedor-de-cambaceo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px;
+      }
+
+      .vendedor-en-una {
+        position: relative;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        width: 298px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+
+      .container-vendedor {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px;
+        color: #202225;
+      }
+
+      .container-experiencia {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px 40px;
+        gap: 32px;
+      }
+
+      .habilidad {
+        position: relative;
+        line-height: 16px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        width: 277px;
+      }
+
+      .ventas-cruzadas {
+        position: relative;
+        line-height: 16px;
+      }
+
+      .ventas-en-mostrador {
+        border-radius: 30px;
+        background-color: #e6f0f9;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 184px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+      }
+
+      .container-chips {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .mayoreo {
+        border-radius: 30px;
+        background-color: #e6f0f9;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 110px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+      }
+
+      .trabajo-en-equipo {
+        border-radius: 30px;
+        background-color: #e6f0f9;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 178px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+      }
+
+      .trabajo-bajo-presin {
+        border-radius: 30px;
+        background-color: #e6f0f9;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 188px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+      }
+
+      .facilidad-de-palabra {
+        border-radius: 30px;
+        background-color: #e6f0f9;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 190px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+      }
+
+      .container-chips-habilidad {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+        color: #589ed6;
+      }
+
+      .container-habilidad {
+        align-self: stretch;
+        border-top: 1px solid #e4eaee;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px 40px;
+        gap: 24px;
+      }
+
+      .espaol-lengua-nativa {
+        border-radius: 30px;
+        background-color: #e6f0f9;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 224px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        color: #589ed6;
+      }
+
+      .container-idiomas {
+        align-self: stretch;
+        border-top: 1px solid #e4eaee;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px 32px;
+        gap: 24px;
+      }
+
+      .ventas-cambaceo {
+        border-radius: 30px;
+        background-color: #e6f0f9;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 165px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+      }
+
+      .container-chips-rea-de-especi {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+        color: #589ed6;
+      }
+
+      .container-experiencia-laboral {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        font-size: 16px;
+        color: #505253;
+      }
+
+      .container-texto-parent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 16px 0px;
+        gap: 16px;
+        font-size: 14px;
+        color: #589ed6;
+      }
+      .container-test {
+        flex-direction: column;
+      }
+      .frame-parent4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 24px;
+        text-align: center;
+      }
+
+      .frame-container {
+        border-radius: 8px;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 970px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 16px;
+        font-size: 16px;
+        color: #898c8f;
+      }
+
+      .sidebar-child {
+        border-radius: 8px;
+        background-color: #e4eaee;
+        width: 217px;
+        height: 40px;
+      }
+
+      .sidebar-item {
+        border-radius: 8px;
+        background-color: #e4eaee;
+        width: 208px;
+        height: 54px;
+      }
+
+      .div1 {
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .div2 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div3 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div4 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .mara-hernndez {
+        position: relative;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+      }
+
+      .jmpeoplezonecom {
+        position: relative;
+        font-size: 10px;
+        letter-spacing: -0.01em;
+        color: #898c8f;
+      }
+
+      .mara-hernndez-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2px;
+      }
+
+      .div5 {
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .sidebar-inner {
+        width: 240px;
+        height: 1px;
+      }
+
+      .group-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .div6 {
+        width: 240px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .sidebar {
+        background-color: #fff;
+        border-right: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 240px;
+        height: 100%;
+        overflow: hidden;
+        color: #313436;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .visualizacin-de-perfil-candid {
+        display: flex;
+        position: relative;
+        background-color: #fcfdfe;
+        width: 100%;
+        height: 942px;
+        text-align: left;
+        font-size: 14px;
+        color: #313336;
+        font-family: "Inter";
+      }
+      .visualizacin-de-perfil-candid-item::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .visualizacin-de-perfil-candid-item::-webkit-scrollbar-thumb {
+        background-color: #50525326;
+        border-radius: 4px;
+      }
+
+      .visualizacin-de-perfil-candid-item::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      .visualizar-el-perfil {
+        margin: 0;
+      }
+
+      .componente-botn-continuar {
+        border-radius: 8px;
+        width: 258px;
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        color: #313336;
+      }
+
+      body {
+        margin: 0;
+        line-height: normal;
+      }
+
+      .container-div {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-top: 24px;
+      }
+
+      aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #f0f0f0;
+        overflow-y: auto;
+      }
+      .container-profile {
+        display: flex;
+        width: 189px;
+        height: 45px;
+        border-radius: 8px;
+        background: var(--grises-300, #e4eaee);
+        padding: 8px 12px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-left: 10px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+      .vector-css {
+        width: 100%;
+        height: 1px;
+        background-color: #e4eaee;
+      }
+      .container-bottom-btns {
+        width: 100%;
+      }
+      .vector-icon {
+        position: relative;
+        width: 197px;
+        height: 151px;
+      }
+      .visualizar-el-perfil {
+        margin: 0;
+      }
+      .container-texto {
+        width: 275px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .componente-botn-continuar {
+        border-radius: 8px;
+        width: 258px;
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        color: #313336;
+      }
+      .evaluacin-prueba-1 {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 16px;
+      }
+      .keyboard-arrow-down-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+      .container-accordion-evaluacin {
+        width: 496px;
+        position: relative;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        height: 68px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 40px;
+        text-align: left;
+        font-size: 24px;
+        color: #505253;
+        font-family: Inter;
+      }
+      .container-chat {
+        display: flex;
+      }
+      #send-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .vendedor-tcnico {
+        position: relative;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #313436;
+        display: inline-block;
+        width: 325px;
+      }
+      .centro-jalisco {
+        position: relative;
+        line-height: 20px;
+        display: inline-block;
+        width: 325px;
+      }
+      .container-texto-Proponer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .siguiente {
+        position: relative;
+        letter-spacing: 0.01em;
+        line-height: 24px;
+        font-weight: 600;
+      }
+      .container-textobotn {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .vacante-propuesta {
+        position: relative;
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px 40px;
+        text-align: left;
+        font-size: 14px;
+        color: #505253;
+        font-family: Inter;
+      }
+      .container-propose {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .boton-proponer {
+        display: flex;
+        width: 178px;
+        height: 48px;
+        display: flex;
+        padding: 10px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex: 1 0 0;
+        align-self: stretch;
+        border-radius: 8px;
+        background: #589ed6;
+        border: none;
+        color: #fff;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.08px;
+        cursor: pointer;
+      }
+      .boton-proponer:hover {
+        background-color: #1f7fce;
+      }
+    </style>
+    <!-- MediaQuery<1024PX  -->
+    <style>
+      @media screen and (min-width: 1025px) {
+        .visualizacin-de-perfil-candid-item {
+          height: 100%;
+        }
+        .frame-container {
+          height: 100%;
+        }
+      }
+    </style>
+    <style>
+      @media screen and (max-width: 767px) {
+        .visualizacin-de-perfil-candid-child {
+          display: none;
+        }
+        .frame-container {
+          flex-direction: column;
+          border: 0px;
+          width: 375px;
+        }
+        .text-fiel-parent {
+          position: relative;
+          bottom: 594px;
+          right: 20px;
+          border-bottom: 0px;
+          width: auto;
+          gap: 28px;
+          flex-direction: column;
+        }
+        .frame-parent1 {
+          position: relative;
+          top: 112px;
+        }
+        .placeholder-wrapper {
+          width: 337px;
+        }
+        .text-fiel {
+          width: auto;
+        }
+        .estatus {
+          position: relative;
+          left: 178px;
+        }
+        .user-icon {
+          width: 70px;
+          height: 70px;
+        }
+        .user-parent {
+          position: relative;
+          bottom: 96px;
+          right: 93px;
+          width: 200px;
+          border-bottom: 0px;
+        }
+        .rea-comercial {
+          font-size: 10px;
+        }
+        .tab-perfil-candidato-wrapper {
+          position: relative;
+          bottom: 508px;
+          width: auto;
+          right: 20px;
+        }
+        .tab,
+        .tab1,
+        .tab2 {
+          width: 121px;
+        }
+        .visualizar {
+          text-align: center;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px; 
+          letter-spacing: -0.16px;
+        }
+        .botn-buscar-talento-parent{ 
+          position: relative;
+          top: 200px;
+        }
+        .container-texto {
+          position: relative; 
+          right: 71px;
+        }
+        .botn-buscar-talento-parent {
+          position: relative; 
+          top: 94px; 
+        }
+        .boton-atrs{
+          position: relative;
+          top: 100px;
+          width: 350px;
+        }
+        .botn-buscar-talento {
+          width: 350px;
+        }
+        .container-texto-parent {
+          position: relative;
+          bottom: 172px;
+          right: 32px;
+        }
+        .container-chips-habilidad {
+          width: 350px;
+        }
+        .container-chips {
+          flex-wrap: wrap;
+        }
+        .container-experiencia-laboral {
+           width: 350px;
+        }
+        .container-accordion-evaluacin {
+          padding: 12px 20px;
+          width: 343px;
+        }
+        .frame-parent4 {
+          align-items: flex-start;
+        }
+        .container-propose {
+          width: 350px;
+
+        }
+        .container-textobotn {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .boton-proponer {
+          align-self: center;
+          width: 100%;
+        }
+      }
+    </style>
+  
+
+  
+    <div class="visualizacin-de-perfil-candid">
+      <!-- SIDEBAR  -->
+      <div class="visualizacin-de-perfil-candid-child"> 
+        <aside class="sidebar">
+          <div class="wrapper-all">
+            <div class="container-profile">
+              <img class="group-icon" alt="" src="/content/genpub/assets/ImgProfile.svg"/>
+              <div class="mara-hernndez-parent">
+                <div class="mara-hernndez">María Hernández</div>
+                <div class="jmpeoplezonecom">jm@peoplezone.com</div>
+              </div>
+            </div>
+            <div class="vector-css"></div>
+            <div class="container-top- 8">
+              <div class="div6">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/homeNavBar.svg"/>
+
+                <div class="div">Inicio</div>
+              </div>
+              <div class="div1">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/List.svg"/>
+
+                <div class="div">Mis Vacantes</div>
+              </div>
+              <div class="container">
+                <div class="div5">
+                  <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/credits.svg"/>
+
+                  <div class="div">Créditos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-bottom-btns">
+            <div class="vector-css"></div>
+
+            <div class="div2">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/settings.svg"/>
+
+              <div class="div">Configuración</div>
+            </div>
+            <div class="div3">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/help.svg"/>
+
+              <div class="div">Ayuda</div>
+            </div>
+            <div class="div4">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/exit.svg"/>
+
+              <div class="div">Salir</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="container-div">
+        <img class="arrow-back-icon" alt="" src="/content/genpub/assets/back-arrow.svg" id="arrowBackIcon"/>
+
+        <div class="visualizacin-de-perfil-candid-item">
+          <div class="frame-container">
+            <div class="frame-div">
+              <div class="frame-parent1">
+                <div class="user-parent">
+                  <img class="user-icon" alt="" src="/content/genpub/assets/img-profileblock.svg"/>
+
+                  <div class="frame-parent2">
+                    <div class="rea-comercial-ejecutivo-wrapper">
+                      <div class="rea-comercial">
+                        Área comercial / Ejecutivo
+                      </div>
+                    </div>
+                    <div class="hombre-parent">
+                      <div class="hombre">Hombre</div>
+                      <div class="aos-wrapper">
+                        <div class="aos">31 años</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-texto">
+                  <div class="container-ubicacin">
+                    <div class="ubicacin">Ubicación</div>
+                    <div class="lvaro-obregn-cdmx">Álvaro Obregón, CDMX</div>
+                  </div>
+                  <div class="container-ubicacin">
+                    <div class="ubicacin">Puesto deseado</div>
+                    <div class="lvaro-obregn-cdmx">Vendedor Técnico</div>
+                  </div>
+                  <div class="container-ubicacin">
+                    <div class="ubicacin">Salario deseado</div>
+                    <div class="lvaro-obregn-cdmx">$10,000 MXN</div>
+                  </div>
+                </div>
+              </div>
+              <div class="botn-buscar-talento-parent">
+                <button class="botn-buscar-talento" id="verDatosBtn" type="submit" value="" name="">
+                  <div class="buscar-talento">Ver datos de contacto</div>
+                </button>
+                <div class="se-utilizar-1">Se utilizará 1 identidad</div>
+              </div>
+              <div class="boton-atrs">
+                <button class="boton-principal" type="submit" value="" name="">
+                  <div class="buscar-talento">Enviar mensaje</div>
+                </button>
+              </div>
+            </div>
+            <div class="rea-comercial-ejecutivo-wrapper">
+              <div class="text-fiel-parent">
+                <div class="text-fiel">
+                  <input type="text" class="placeholder-wrapper" placeholder="Buscar vacante"/>
+                </div>
+                <div class="estatus">
+                  <select class="header">
+                    <option class="pendiente">Pendiente</option>
+                  </select>
+                </div>
+              </div>
+              <div class="frame-parent4">
+                <div class="tab-perfil-candidato-wrapper">
+                  <div class="tab-perfil-candidato">
+                    <div class="tab" onclick="mostrarPagina('page1'); seleccionarTab(this);">
+                      <div class="visualizar">Currículo</div>
+                    </div>
+                    <div class="tab1" onclick="mostrarPagina('page2'); seleccionarTab(this);">
+                      <div class="visualizar1">Evaluaciones</div>
+                    </div>
+                    <div class="tab2" onclick="mostrarPagina('page3'); seleccionarTab(this);">
+                      <div class="visualizar1">Proponer</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-texto-parent page" style="display: flex" id="page1">
+                  <div class="container-texto1">
+                    <div class="cv-1125896pdf" id="cV1125896pdf">
+                      C.V - 1125896.pdf
+                    </div>
+                    <div class="actualizado-hace-3">
+                      actualizado hace 3 días
+                    </div>
+                  </div>
+                  <div class="container-experiencia-laboral">
+                    <div class="container-experiencia">
+                      <div class="experiencia-laboral">Experiencia laboral</div>
+                      <div class="container-vendedor">
+                        <div class="vendedor-de-cambaceo">
+                          <div class="vendedor-de-cambaceo1">
+                            Vendedor de cambaceo
+                          </div>
+                          <div class="febrero-2019-">
+                            Febrero 2019 - Marzo 2023
+                          </div>
+                        </div>
+                        <div class="vendedor-de-cambaceo">
+                          <div class="vendedor-en-una">
+                            Vendedor en una tienda de electrónica
+                          </div>
+                          <div class="febrero-2019-">
+                            Enero 2018 - Diciembre 2019
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-habilidad">
+                      <div class="habilidad">Habilidad</div>
+                      <div class="container-chips-habilidad">
+                        <div class="container-chips">
+                          <div class="ventas-cambaceo">
+                            <div class="ventas-cruzadas">Ventas cruzadas</div>
+                          </div>
+                          <div class="ventas-en-mostrador">
+                            <div class="ventas-cruzadas">
+                              Venta en mostrador
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container-chips">
+                          <div class="mayoreo">
+                            <div class="ventas-cruzadas">Mayoreo</div>
+                          </div>
+                          <div class="mayoreo">
+                            <div class="ventas-cruzadas">Menudeo</div>
+                          </div>
+                          <div class="trabajo-en-equipo">
+                            <div class="ventas-cruzadas">Trabajo en equipo</div>
+                          </div>
+                        </div>
+                        <div class="container-chips">
+                          <div class="trabajo-bajo-presin">
+                            <div class="ventas-cruzadas">
+                              Trabajo bajo presión
+                            </div>
+                          </div>
+                          <div class="facilidad-de-palabra">
+                            <div class="ventas-cruzadas">
+                              Facilidad de palabra
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-idiomas">
+                      <div class="habilidad">Idiomas</div>
+                      <div class="espaol-lengua-nativa">
+                        <div class="ventas-cruzadas">
+                          Español - Lengua nativa
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-idiomas">
+                      <div class="habilidad">Área de especialidad</div>
+                      <div class="container-chips-rea-de-especi">
+                        <div class="ventas-cambaceo">
+                          <div class="ventas-cruzadas">Ventas cambaceo</div>
+                        </div>
+                        <div class="ventas-cambaceo">
+                          <div class="ventas-cruzadas">Ventas cruzadas</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-test page" id="page2" style="display: none">
+                  <div class="container-accordion-evaluacin">
+                    <b class="evaluacin-prueba-1">Evaluación Prueba 1</b>
+                    <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/down-arrow.svg"/>
+                  </div>
+                  <div class="container-accordion-evaluacin">
+                    <b class="evaluacin-prueba-1">Evaluación Prueba 2</b>
+                    <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/down-arrow.svg"/>
+                  </div>
+                  <div class="container-accordion-evaluacin">
+                    <b class="evaluacin-prueba-1">Evaluación Prueba 3</b>
+                    <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/down-arrow.svg"/>
+                  </div>
+                </div>
+                <div class="container-propose page" id="page3" style="display: none">
+                  <div class="vacante-propuesta">
+                    <div class="container-textobotn">
+                      <div class="container-texto-Proponer">
+                        <div class="vendedor-tcnico">Vendedor mayorista</div>
+                        <div class="centro-jalisco">
+                          Ecatepec, Edo. de México
+                        </div>
+                        <div class="centro-jalisco">$9,000 MXN</div>
+                      </div>
+                      <button class="boton-proponer" type="submit" value="" name="">
+                        <div class="siguiente">Proponer</div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="vacante-propuesta">
+                    <div class="container-textobotn">
+                      <div class="container-texto-Proponer">
+                        <div class="vendedor-tcnico">Vendedor mayorista</div>
+                        <div class="centro-jalisco">
+                          Ecatepec, Edo. de México
+                        </div>
+                        <div class="centro-jalisco">$9,000 MXN</div>
+                      </div>
+                      <button class="boton-proponer" type="submit" value="" name="">
+                        <div class="siguiente">Proponer</div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="vacante-propuesta">
+                    <div class="container-textobotn">
+                      <div class="container-texto-Proponer">
+                        <div class="vendedor-tcnico">Vendedor mayorista</div>
+                        <div class="centro-jalisco">
+                          Ecatepec, Edo. de México
+                        </div>
+                        <div class="centro-jalisco">$9,000 MXN</div>
+                      </div>
+                      <button class="boton-proponer" type="submit" value="" name="">
+                        <div class="siguiente">Proponer</div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+      var quill = new Quill("#editor", {
+        theme: "snow",
+      });
+
+      var chatContainer = document.getElementById("chat");
+      var sendButton = document.getElementById("send-button");
+
+      sendButton.addEventListener("click", function () {
+        var message = quill.root.innerHTML;
+        if (message.trim() !== "") {
+          chatContainer.innerHTML +=
+            '<div class="container-chat"> <p><strong>Tú:</strong> ' +
+            message +
+            "</p> </div>";
+          quill.root.innerHTML = "";
+          chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+      });
+    </script>
+    <script>
+      function mostrarPagina(idPaginaMostrar) {
+        // Ocultar todas las páginas
+        var paginas = document.querySelectorAll(".page");
+        for (var i = 0; i < paginas.length; i++) {
+          paginas[i].style.display = "none";
+        }
+
+        // Mostrar la página deseada
+        var paginaMostrar = document.getElementById(idPaginaMostrar);
+        if (paginaMostrar) {
+          paginaMostrar.style.display = "flex";
+        }
+      }
+
+      function seleccionarTab(tabSeleccionado) {
+        var tabs = document.querySelectorAll(".tab-perfil-candidato div");
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].style.borderBottom = "2px solid #e4eaee";
+        }
+
+        tabSeleccionado.style.borderBottom = "2px solid #589ed6";
+      }
+    </script>
+  

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/js/jquery-1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="/styles/reclutador/index.css">
+    <link rel="stylesheet" href="/styles/reclutador/index.scss">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&amp;display=swap">
     <!-- ToolbarQuill -->
@@ -6058,7 +6058,29 @@
 
         <!-- script crearVacante  -->
 
-<script src="/js/reclutador/index.js"></script>
+        <script src="/js/reclutador/index.js"></script>
+        <script>
+                var globitoInicialCreado = false;
+
+function mostrarCampos(opcionSeleccionada) {
+    var contenedor = document.getElementById("contenedor-prestaciones");
+    var chip = document.querySelector(".chip-prestaciones");
+
+    if (opcionSeleccionada == "Superiores a las de Ley") {
+        contenedor.style.display = "block";
+        if (!globitoInicialCreado) {
+            crearGlobitoDefault(chip);
+            globitoInicialCreado = true;
+            actualizarValoresPrestaciones();
+        }
+    } else {
+        contenedor.style.display = "none";
+        globitoInicialCreado = false;
+        chip.innerHTML = "";
+        actualizarValoresPrestaciones();
+    }
+}
+        </script>
         <!-- jquery enr   -->
         <script src="/js/reclutador/index2.js"></script>
 

@@ -1,0 +1,2148 @@
+
+<script src="/js/jquery-1.12.4.min.js"></script>
+<script src="/Content/GenPub/Scripts/Scripts23.js"></script>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="initial-scale=1, width=device-width"/>
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&amp;display=swap">
+  <style>
+    .encuentra-tu-empleo,
+    .hola-mara {
+      width: 389px;
+      height: 24px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.01em;
+      color: #202325;
+    }
+    .encuentra-tu-empleo {
+      width: 389px;
+      height: 24px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.01em;
+      color: #589ed6;
+      margin-top: 16px;
+    }
+    .hola-mara-parent {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: var(--gap-base);
+    }
+    .label,
+    .placeholder {
+      flex: 1;
+      position: relative;
+    }
+    .label {
+      align-self: stretch;
+      letter-spacing: 0.4px;
+      line-height: 16px;
+      display: none;
+      align-items: center;
+    }
+    .placeholder-sueldo {
+      letter-spacing: 0.5px;
+      line-height: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 6px 12px;
+      gap: 10px;
+      width: 187px;
+      height: 48px;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: "Inter";
+      font-style: normal;
+    }
+    .placeholder-sueldo:hover {
+      box-shadow: 1px 5px 7px -3px grey;
+    }
+    .placeholder-Modalidad {
+      letter-spacing: 0.5px;
+      line-height: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 6px 12px;
+      gap: 10px;
+      width: 144px;
+      height: 48px;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: "Inter";
+      font-style: normal;
+    }
+    .placeholder-Modalidad:hover {
+      box-shadow: 1px 5px 7px -3px grey;
+    }
+    .placeholder-Ubicacion {
+      letter-spacing: 0.5px;
+      line-height: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 6px 12px;
+      gap: 10px;
+      width: 187px;
+      height: 48px;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: "Inter";
+      font-style: normal;
+    }
+    .placeholder-Ubicacion:hover {
+      box-shadow: 1px 5px 7px -3px grey;
+    }
+    .placeholder-Categoria {
+      letter-spacing: 0.5px;
+      line-height: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 6px 12px;
+      gap: 10px;
+      width: 186px;
+      height: 48px;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: "Inter";
+      font-style: normal;
+    }
+    .placeholder-Categoria:hover {
+      box-shadow: 1px 5px 7px -3px grey;
+    }
+    .placeholder-Fecha {
+      letter-spacing: 0.5px;
+      line-height: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 6px 12px;
+      gap: 10px;
+      width: 230px;
+      height: 48px;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: "Inter";
+      font-style: normal;
+    }
+    .placeholder-Fecha:hover {
+      box-shadow: 1px 5px 7px -3px grey;
+    }
+    .placeholder {
+      letter-spacing: 0.5px;
+      line-height: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 6px 12px;
+      gap: 10px;
+      width: 163px;
+      height: 32px;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      justify-content: center;
+      font-family: "Inter";
+      font-style: normal;
+    }
+    .placeholder:hover {
+      box-shadow: 1px 5px 7px -3px grey;
+    }
+    .visibility-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+      flex-shrink: 0;
+      display: none;
+    }
+    .placeholder-parent {
+      align-self: stretch;
+      border-radius: var(--br-5xs);
+      background-color: var(--grises-50);
+      border: 1px solid var(--grises-300);
+      box-sizing: border-box;
+      height: 48px;
+      display: flex;
+      flex-direction: row;
+      padding: var(--padding-7xs) var(--padding-xs);
+      align-items: center;
+      justify-content: flex-start;
+      gap: var(--gap-3xs);
+      font-size: var(--paragraph-p02-semi-bold-size);
+      color: var(--grises-500);
+    }
+    .texto-de-apoyo {
+      flex: 1;
+      position: relative;
+      letter-spacing: 0.4px;
+      line-height: 16px;
+    }
+    .text-fiel,
+    .texto-de-apoyo-para-inputs-wrapper {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .texto-de-apoyo-para-inputs-wrapper {
+      align-self: stretch;
+      display: none;
+      flex-direction: row;
+      padding: 0 var(--padding-5xs);
+      font-size: var(--overline-semi-bold-size);
+    }
+    .label1 {
+      align-self: stretch;
+      position: relative;
+      letter-spacing: -0.5px;
+      line-height: 16px;
+      font-weight: 500;
+      display: none;
+    }
+    .arrow-back-ios-icon {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .sueldo-parent {
+      align-self: stretch;
+      border-radius: var(--br-5xs);
+      border: 1px solid var(--color-whitesmoke-100);
+      box-sizing: border-box;
+      height: 48px;
+      display: flex;
+      flex-direction: row;
+      padding: var(--padding-7xs) var(--padding-xs);
+      align-items: center;
+      justify-content: flex-start;
+      gap: var(--gap-3xs);
+      font-size: var(--paragraph-p02-semi-bold-size);
+      color: var(--grises-500);
+    }
+    .texto-de-apoyo1 {
+      flex: 1;
+      position: relative;
+      letter-spacing: 0.4px;
+      line-height: 16px;
+      display: none;
+    }
+    .texto-de-apoyo-para-inputs-container {
+      align-self: stretch;
+      display: none;
+      flex-direction: row;
+      padding: 0 var(--padding-5xs);
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: var(--overline-semi-bold-size);
+      color: var(--negros-700);
+    }
+    .component-107 {
+      width: 187px;
+    }
+    .accordion,
+    .component-107 {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: var(--gap-5xs);
+    }
+    .carrusel-texto-de {
+      flex: 1;
+      position: relative;
+      letter-spacing: 0.01em;
+      line-height: 24px;
+    }
+    .accordion1,
+    .accordion4 {
+      align-self: stretch;
+      border-radius: var(--br-5xs);
+      background-color: var(--color-white);
+      flex-direction: row;
+      padding: var(--padding-5xs);
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .accordion1 {
+      display: flex;
+    }
+    .accordion4 {
+      display: none;
+    }
+    .dropdown,
+    .modalidad {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .dropdown {
+      align-self: stretch;
+      border-radius: var(--br-5xs);
+      background-color: var(--color-white);
+      box-shadow: 0 4px 4px rgba(88, 158, 214, 0.15);
+      display: none;
+      align-items: flex-start;
+      font-size: var(--paragraph-p02-semi-bold-size);
+      color: var(--grises-900);
+    }
+    .modalidad {
+      width: 144px;
+      display: flex;
+    }
+    .dropdown1,
+    .modalidad,
+    .sueldo1 {
+      align-items: flex-start;
+    }
+    .dropdown1 {
+      align-self: stretch;
+      border-radius: var(--br-5xs);
+      background-color: var(--color-white);
+      box-shadow: 0 4px 4px rgba(88, 158, 214, 0.15);
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      color: var(--grises-900);
+    }
+    .sueldo1 {
+      width: 187px;
+      display: flex;
+    }
+    .accordion15,
+    .dropdown2,
+    .sueldo1 {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    .accordion15 {
+      align-self: stretch;
+      display: flex;
+      align-items: flex-end;
+      gap: var(--gap-5xs);
+    }
+    .dropdown2 {
+      border-radius: var(--br-5xs);
+      background-color: var(--color-white);
+      box-shadow: 0 4px 4px rgba(88, 158, 214, 0.15);
+      width: 312px;
+      display: none;
+      align-items: flex-start;
+      color: var(--grises-900);
+    }
+    .sueldo2,
+    .sueldo3,
+    .text-fiel-parent {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .sueldo2 {
+      width: 186px;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .sueldo3,
+    .text-fiel-parent {
+      align-items: flex-start;
+    }
+    .sueldo3 {
+      width: 230px;
+      flex-direction: column;
+    }
+    .text-fiel-parent {
+      flex-direction: row;
+      gap: 16px;
+      width: 1200px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .text-fiel-parent-inputs {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      gap: 16px;
+      width: 1200px;
+      margin-top: 32px;
+    }
+    .siguiente {
+      position: relative;
+      letter-spacing: 0.01em;
+      line-height: 24px;
+      font-weight: 600;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 32px;
+      gap: 10px;
+      width: 187px;
+      height: 48px;
+      background: #589ed6;
+      border-radius: 8px;
+      border: none;
+      color: #ffffff;
+      font-family: "Inter";
+      font-style: normal;
+    }
+    .siguiente:hover {
+      background-color: #2880c9;
+      cursor: pointer;
+    }
+    .boton-aplicar,
+    .boton-principal {
+      display: flex;
+      flex-direction: row;
+    }
+    .boton-principal {
+      align-self: stretch;
+      flex: 1;
+      border-radius: var(--br-5xs);
+      background-color: var(--principal-300);
+      padding: var(--padding-3xs) var(--padding-13xl);
+      align-items: center;
+      justify-content: center;
+    }
+    .boton-aplicar {
+      width: 0px;
+      height: 48px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: var(--paragraph-p02-semi-bold-size);
+      color: var(--color-white);
+    }
+    .frame-container,
+    .frame-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .frame-div {
+      align-items: flex-start;
+      gap: var(--gap-5xl);
+      font-size: var(--paragraph-p03-semi-bold-size);
+      color: var(--color-darkslategray-100);
+    }
+    .frame-container {
+      border-bottom: 1px solid var(--grises-300);
+      padding: var(--padding-base) 0;
+      align-items: flex-start;
+      gap: var(--gap-13xl);
+    }
+    .resultados-de-vendedor {
+      position: relative;
+      line-height: 16px;
+      font-weight: 500;
+      color: #898c8f;
+      font-family: "Inter";
+      font-style: normal;
+      font-size: 12px;
+    }
+    .resultados-de-vendedor-wrapper {
+      width: 286px;
+      display: flex;
+      flex-direction: row;
+      padding: var(--padding-5xs);
+      box-sizing: border-box;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .hace-30-das {
+      position: relative;
+      display: inline-block;
+      width: 85px;
+      height: 12px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      text-align: right;
+      color: #589ed6;
+    }
+    .centro-jalisco,
+    .mxn,
+    .vendedor-tcnico {
+      align-self: stretch;
+      position: relative;
+      line-height: 20px;
+    }
+    .vendedor-tcnico {
+      width: 325px;
+      height: 20px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.0025em;
+      color: #292929;
+    }
+    .centro-jalisco {
+      width: 325px;
+      height: 20px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 20px;
+      letter-spacing: 0.0025em;
+      color: #292929;
+    }
+
+    .mxn {
+      width: 325px;
+      height: 20px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.0025em;
+      color: #292929;
+    }
+    .vendedor-tcnico-parent {
+      align-self: stretch;
+      height: 68px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 24px;
+    }
+    .prestaciones-superiores-a {
+      margin: 0;
+    }
+    .horario-900-1800-prestacion-container {
+      align-self: stretch;
+      position: relative;
+      width: 325px;
+      height: 45px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #787f84;
+    }
+    .frame-parent3,
+    .hace-30-das-parent {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .frame-parent3 {
+      width: 357px;
+      padding: 0 var(--padding-base);
+      box-sizing: border-box;
+      align-items: flex-start;
+      gap: var(--gap-5xl);
+      text-align: left;
+      font-size: var(--paragraph-p02-semi-bold-size);
+      color: var(--negros-600);
+      padding: 16px;
+    }
+    .hace-30-das-parent {
+      align-items: flex-end;
+      gap: var(--gap-5xs);
+    }
+    .frame-parent3:hover {
+      border-left: 3px solid #589ed6;
+    }
+    .card-vacante {
+      align-items: flex-end;
+      padding: 24px 16px;
+      gap: 8px;
+      width: 357px;
+      height: 177px;
+      background: #fcfdfe;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+    }
+    .card-vacante:hover {
+      cursor: pointer;
+      box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+    .card-vacante,
+    .frame-parent2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .frame-parent2 {
+      align-items: center;
+      gap: var(--gap-5xl);
+      margin-bottom: 64px;
+    }
+    .arrow-back-ios-wrapper {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      gap: 10px;
+      width: 55px;
+      height: 40px;
+      border: 1px solid #589ed6;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #323232;
+      font-size: 20px;
+      font-family: "Inter";
+      font-weight: 600;
+    }
+    .arrow-back-ios-wrapper:hover {
+      background-color: #589ed6;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    .div {
+      position: relative;
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 32px;
+    }
+    .wrapper {
+      background-color: var(--principal-300);
+      color: var(--grises-50);
+    }
+    .container,
+    .wrapper {
+      border-radius: var(--br-11xl);
+      width: auto;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      padding: var(--padding-3xs);
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-parent16 {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: var(--gap-5xs);
+      margin-left: 14px;
+      margin-right: 14px;
+    }
+    .arrow-forward-ios-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .frame-parent15,
+    .vacantes {
+      display: flex;
+      align-items: center;
+    }
+    .frame-parent15 {
+      width: 592px;
+      flex-direction: row;
+      padding: var(--padding-5xs) var(--padding-5xl);
+      box-sizing: border-box;
+      justify-content: center;
+      gap: var(--gap-5xl);
+      text-align: center;
+      font-size: var(--paragraph-p02-semi-bold-size);
+      color: var(--grises-500);
+    }
+    .vacantes {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: var(--gap-45xl);
+      text-align: right;
+      font-size: var(--overline-semi-bold-size);
+      color: var(--principal-300);
+      margin-bottom: 82.62px;
+    }
+    .frame-parent1 {
+      padding: var(--padding-base) 0;
+      gap: var(--gap-base);
+      font-size: var(--caption-semi-bold-size);
+      color: var(--grises-500);
+      border-top: 1px solid #e4eaee;
+      margin-top: 16px;
+      width: 1200px;
+      padding-top: 16px;
+    }
+    .frame-group,
+    .frame-parent1 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .frame-child {
+      position: absolute;
+      bottom: 485px;
+      left: calc(50% - 600px);
+      width: 1200px;
+      height: 0;
+    }
+    .facebook-icon {
+      position: relative;
+      width: 48px;
+      height: 48px;
+    }
+    .people-zone {
+      position: relative;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+      margin-left: 40px;
+    }
+    .facebook-parent {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: var(--gap-21xl);
+    }
+    .people-zone1 {
+      position: relative;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+    }
+    .encuntranos-en-parent,
+    .frame-parent18 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .frame-parent18 {
+      font-size: var(--paragraph-p02-semi-bold-size);
+      font-family: var(--overline-semi-bold);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 24px;
+      width: 239px;
+      height: 264px;
+    }
+    .encuntranos-en-parent {
+      position: absolute;
+      top: 120px;
+      left: 929px;
+      gap: var(--gap-13xl);
+    }
+    .capa-1-icon {
+      position: relative;
+      width: 288px;
+      height: 64px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      padding: var(--padding-5xs);
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .politica-de-privacidad {
+      position: relative;
+      font-weight: 600;
+    }
+    .politica-de-privacidad-parent {
+      justify-content: flex-start;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: var(--gap-5xl);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 24px;
+      width: 214px;
+      height: 168px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #000000;
+      margin-bottom: 48px;
+    }
+    .av-insurgentes-sur {
+      margin-block-start: 0;
+      margin-block-end: 12px;
+    }
+    .av-insurgentes-sur-container {
+      position: relative;
+      line-height: 166%;
+      display: inline-block;
+      width: 405px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+    .av-insurgentes-sur-605-pb-n-parent,
+    .logo-parent {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .av-insurgentes-sur-605-pb-n-parent {
+      gap: var(--gap-base);
+      font-size: var(--paragraph-p02-semi-bold-size);
+    }
+    .logo-parent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      gap: var(--gap-29xl);
+      font-family: var(--overline-semi-bold);
+    }
+    .frame-parent17 {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 1168px;
+      height: 445px;
+    }
+    .vector-parent {
+      position: relative;
+      width: 1200px;
+      height: 485px;
+      font-size: var(--paragraph-p01-regular-size);
+      color: var(--color-black);
+      font-family: var(--font-mulish);
+    }
+    .frame-parent {
+      position: absolute;
+      top: 80px;
+      left: 27px;
+      display: flex;
+      flex-direction: column;
+      padding: var(--padding-13xl) 0;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: var(--gap-29xl);
+    }
+    .capa-1-icon1,
+    .home-icon {
+      position: relative;
+      width: 180px;
+      height: 40px;
+    }
+    .home-icon {
+      width: 36px;
+      height: 36px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .header,
+    .home-parent {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .home-parent {
+      width: 240px;
+      justify-content: flex-start;
+      gap: var(--gap-13xl);
+    }
+    .header {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 720px);
+      border-bottom: 1px solid var(--grises-300);
+      box-sizing: border-box;
+      width: 1439px;
+      height: 80px;
+      padding: 0 var(--padding-13xl);
+      justify-content: space-between;
+    }
+    .inicio-dashboard-candidato {
+      position: relative;
+      background-color: var(--color-white);
+      width: 100%;
+      height: 1044px;
+      text-align: left;
+      font-size: var(--heading-h2-small-medium-size);
+      color: var(--grises-900);
+      font-family: var(--overline-semi-bold);
+    }
+    .container-btn {
+      display: flex;
+      margin-top: 24px;
+      width: 186px;
+    }
+    .container-btns-desk-save-share {
+      display: flex;
+    }
+    .container-save-share {
+      display: none;
+    }
+  </style>
+  <!-- Style media query   -->
+  <style>
+    .carousel-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    @media screen and (max-width: 767px) {
+      .carousel-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 0 10px;
+        width: 380px;
+        padding-left: 14px;
+      }
+
+      .carousel-container > * {
+        flex: 0 0 auto;
+        margin-right: 10px; /* Espacio entre elementos */
+        scroll-snap-align: start;
+      }
+      .carousel-container::-webkit-scrollbar {
+        width: 0.5rem; /* Ancho de la barra de desplazamiento */
+      }
+
+      .carousel-container::-webkit-scrollbar-track {
+        background: transparent; /* Color de fondo de la barra de desplazamiento */
+      }
+
+      .carousel-container::-webkit-scrollbar-thumb {
+        background: transparent; /* Color del "pulgar" de la barra de desplazamiento */
+      }
+
+      .carousel-container::-webkit-scrollbar-thumb:hover {
+        background: transparent; /* Color del "pulgar" de la barra de desplazamiento en hover */
+      }
+      .text-fiel-parent {
+        flex-direction: column;
+        width: 400px;
+      }
+      .frame-parent1 {
+        width: 400px;
+      }
+      .frame-parent15 {
+        width: 400px;
+      }
+      .frame-parent17 {
+        width: 400px;
+      }
+      .frame-parent18 {
+        width: 156px
+      }
+      .vector-Css {
+        width: 400px !important;
+      }
+      .frame-parent {
+        left: 6px;
+      }
+      .vector-Css {
+        width: 400px;
+      }
+      .politica-de-privacidad {
+        color: #000;
+      font-family: "Inter";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      }
+      .people-zone {
+        color: #000;
+        width: 76.842px;
+        font-family: "Inter";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .div {
+        display: none;
+      }
+      .facebook-icon {
+        width: 29.5px;
+        height: 28px;
+      }
+      .encuntranos-en-parent {
+        top: 97px;
+        left: 230px;
+      }
+      .av-insurgentes-sur {
+        color: #000;
+        width: 327px;
+        font-family: "Inter";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .prestaciones-superiores-a {
+        color: #000;
+        width: 327px;
+        font-family: "Inter";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .people-zone1 {
+        width: 327px;
+        color: #000;
+        font-family: "Inter";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: lowercase;
+      }
+      .vector-parent {
+        width: 407px;
+      }
+      .frame-detail-card {
+        padding-left: 16px !important;
+      }
+      .nombre-vacante {
+        display: flex;
+        justify-content: space-between;
+        width: 380px;
+      }
+      .container-save-share {
+        display: flex;
+      }
+      .container-btns-desk-save-share {
+        display: none;
+      }
+      .boton-principal {
+        position: relative;
+        left: 487px;
+      }
+      .btn-Post {
+        width: 355px;
+      }
+      .periodo-de-pago-mensual-parent {
+        margin-top: 124px;
+      }
+      .frame-detail-card {
+        width: 289px !important;
+      }
+      .frame-parent-detail-1 {
+        width: 380px;
+      }
+      .container-globitos {
+        width: 374px !important;
+      }
+      .card-vacante-mvil-parent {
+        flex-direction: column;
+      }
+      .container-btns {
+        position: relative;
+        top: 266px;
+        right: 297px;
+        width: 355px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .carousel-container > * {
+        width: 190%;
+      }
+    }
+  </style>
+  <!-- Styles paginacion -->
+  <style>
+    .vector-Css {
+      width: 1200px;
+      background-color: rgba(228, 234, 238, 1);
+      height: 2px;
+    }
+    .containerPag {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    .pagination {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .pageNumber {
+      margin: 0 5px;
+    }
+
+    .btnpg {
+      padding: 5px 10px;
+      font-size: 16px;
+      border: none;
+      background: #ffffff;
+      cursor: pointer;
+      border-radius: 30px;
+      width: 40px;
+      height: 40px;
+    }
+    .btnpg.active {
+      background: #589ed6;
+      color: #ffffff;
+    }
+    .btnpg:hover {
+      background: #589ed6;
+      color: #ffffff;
+    }
+  </style>
+  <!-- Style detail  -->
+  <style>
+    .vacantes-similares-parent {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .card-vacante-mvil-parent {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .nombre-vacante {
+      color: var(--negros-600, #292929);
+      font-family: "Inter";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0.06px;
+    }
+    .ubicacion {
+      width: 325px;
+      height: 20px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 20px;
+      letter-spacing: 0.0025em;
+      color: #292929;
+    }
+    .frame-parent-detail-3 {
+      margin-bottom: 48px;
+    }
+    .line {
+      width: 100%;
+      height: 1px;
+      background: #d3d3d3;
+      margin-bottom: 48px;
+    }
+    .frame-detail-card {
+      border-top: 1px solid var(--grises-300, #e4eaee);
+      margin-top: 16px;
+      padding-top: 80px;
+      padding-left: 104px;
+      padding-right: 104px;
+      width: 992px;
+    }
+    .vendedor-minorista-parent {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    .modalidad-presencial-parent {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .frame-parent-detail-4 {
+      width: 300px;
+    }
+    .container-btns {
+      display: flex;
+      gap: 8px;
+    }
+    .frame-parent-detail-3 {
+      display: flex;
+      justify-content: space-between;
+    }
+    .share-btn {
+      border: none;
+      background-color: transparent;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .share-btn:hover {
+      background-color: transparent;
+    }
+    .save-btn {
+      border: none;
+      background-color: transparent;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .save-btn:hover {
+      background-color: transparent;
+    }
+    .btn-Post {
+      display: flex;
+      height: 56px;
+      padding: 10px 32px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex: 1 0 0;
+      border-radius: 8px;
+      background: #589ed6;
+      color: #ffffff;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0.08px;
+      border: none;
+    }
+    .btn-Post:hover {
+      background-color: #2880c9;
+      cursor: pointer;
+    }
+    .datos-blod {
+      color: var(--grises-800, #313436);
+      font-family: "Inter";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .datos-basic {
+      color: var(--negros-600, #292929);
+      font-family: "Inter";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.04px;
+    }
+    .periodo-de-pago-mensual-parent {
+      gap: 24px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 48px;
+    }
+    .globito {
+      display: flex;
+      padding: 10px;
+      align-items: flex-start;
+      gap: 10px;
+      border-radius: 30px;
+      border: 1px solid var(--principal-300, #589ed6);
+      background: var(--principal-100, #e6f0f9);
+      color: var(--principal-300, #589ed6);
+      font-family: Inter;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 8px;
+    }
+    .container-globitos {
+      display: flex;
+      flex-wrap: wrap;
+      width: 598px;
+      gap: 8px;
+    }
+    .habilidades-indispensable-para-parent {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    .frame-parent-detail-1 {
+      padding-bottom: 48px;
+      margin-bottom: 64px;
+    }
+    .prestaciones-superiores-parent {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .vacantes-similares {
+      color: var(--grises-800, #313436);
+      font-family: "Inter";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  </style>
+
+
+  <div class="inicio-dashboard-candidato">
+    <div class="frame-parent">
+      <div class="frame-group">
+        <div class="frame-container">
+          <div class="hola-mara-parent">
+            <div class="hola-mara">¡Hola María!</div>
+            <div class="encuentra-tu-empleo">Encuentra tu empleo ideal</div>
+          </div>
+          <div class="frame-div">
+            <div class="carousel-container">
+              <div class="text-fiel-parent-inputs">
+                <div class="text-fiel">
+                  <div class="placeholder-parent">
+                    <input class="placeholder" placeholder="Puesto o empresa" name="Buscador" oninput="buscarVacantes(this.value)"/>
+                  </div>
+                </div>
+                <div class="component-107">
+                  <div class="label1">Sueldo</div>
+                  <div class="sueldo-parent">
+                    <select class="placeholder-sueldo" name="sueldo">
+                      <option value="">Sueldo</option>
+                      <option value="$5000 Max">Hasta $5,000 MXN</option>
+                      <option value="$20,000 - $30,000 MXN">
+                        $20,000 - $30,000 MXN
+                      </option>
+                      <option value="$30,000 - $40,000 MXN">
+                        $30,000 - $40,000 MXN
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="modalidad">
+                  <div class="accordion">
+                    <div class="sueldo-parent">
+                      <select class="placeholder-Modalidad" name="Modalidad">
+                        <option value="">Modalidad</option>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Hibrido">Híbrido</option>
+                        <option value="Remoto">Remoto</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion">
+                  <div class="sueldo-parent">
+                    <select class="placeholder-Ubicacion" name="Ubicacion">
+                      <option value="">Ubicación</option>
+                      <option value="Ciudad de México">
+                        Ciudad de México
+                      </option>
+                      <option value="Jalisco">Jalisco</option>
+                      <option value="Nuevo León">Nuevo León</option>
+                      <option value="Estado de México">
+                        Estado de México
+                      </option>
+                      <option value="Morelos">Morelos</option>
+                      <option value="Hidalgo">Hidalgo</option>
+                      <option value="Querétaro">Querétaro</option>
+                      <option value="Guanajuato">Guanajuato</option>
+                      <option value="Veracruz">Veracruz</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="accordion15">
+                  <div class="sueldo-parent">
+                    <select class="placeholder-Categoria" id="Areas" name="AreaInteres">
+                      <option value="">Categoría</option>
+                      <option value="Ventas">Ventas</option>
+                      <option value=" Atención a clientes / call center">
+                        Atención a clientes / call center
+                      </option>
+                      <option value="Administrativo">Administrativo</option>
+                      <option value="Diseño">Diseño</option>
+                      <option value="Ingeniería">Ingeniería</option>
+                      <option value=" Contabilidad - Finanzas">
+                        Contabilidad - Finanzas
+                      </option>
+                      <option value="Recursos humanos">
+                        Recursos humanos
+                      </option>
+                      <option value="Derecho">Derecho</option>
+                      <option value="Salud y bienestar">
+                        Salud y bienestar
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="sueldo3">
+                  <div class="accordion">
+                    <div class="label1">Sueldo</div>
+                    <div class="sueldo-parent">
+                      <select class="placeholder-Fecha" name="Fecha">
+                        <option value="">Fecha de publicación</option>
+                        <option value="Ayer">Ayer</option>
+                        <option value="Hace 2 días">Hace 2 días</option>
+                        <option value="Hace 3 días">Hace 3 días</option>
+                        <option value="Hace 1 semana">Hace 1 semana</option>
+                        <option value="Hace 2 semanas">Hace 2 semanas</option>
+                        <option value="Hace 1 mes">Hace 1 mes</option>
+                        <option value="Hace 2 meses">Hace 2 meses</option>
+                        <option value="Hace meses">Hace meses</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-btn">
+                <div class="boton-aplicar">
+                  <div class="boton-principal">
+                    <button class="siguiente" onclick="aplicarFiltros()" type="submit" value="" name="">
+                      Aplicar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="frame-parent1">
+              <div class="resultados-de-vendedor-wrapper">
+                <div class="resultados-de-vendedor">
+                  50 resultados de “Vendedor”
+                </div>
+              </div>
+              <div class="vacantes">
+                <div class="frame-parent2 page" id="page1">
+                  <div class="text-fiel-parent">
+                    <div class="card-vacante">
+                      <div class="hace-30-das" name="Fecha">Hace 30 días</div>
+                      <div class="hace-30-das-parent">
+                        <div class="frame-parent3">
+                          <div class="vendedor-tcnico-parent">
+                            <div class="vendedor-tcnico" name="Puesto">
+                              Vendedor técnico
+                            </div>
+                            <div class="centro-jalisco" name="Ubicacion">
+                              Centro, Jalisco
+                            </div>
+                            <div class="centro-jalisco" name="Sueldo">Escolaridad: Licenciatura</div>
+                            <div class="mxn" name="Sueldo">$5,000 MXN</div>
+                          </div>
+                          <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                            <p class="prestaciones-superiores-a">
+                              Modaliad: Presencial
+                            </p>
+                            <p class="prestaciones-superiores-a">
+                              Experiencia necesaria: 2 años como vendedor
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-vacante">
+                      <div class="hace-30-das-parent">
+                        <div class="hace-30-das" name="Fecha">
+                          Hace 30 días
+                        </div>
+                        <div class="frame-parent3">
+                          <div class="vendedor-tcnico-parent">
+                            <div class="vendedor-tcnico" name="Puesto">
+                              Vendedor mayorista
+                            </div>
+                            <div class="centro-jalisco" name="Ubicaion">
+                              Ecatepec, Edo. de México
+                            </div>
+                            <div class="centro-jalisco" name="Sueldo">Escolaridad: Licenciatura</div>
+                            <div class="mxn" name="Sueldo">$10,000 MXN</div>
+                          </div>
+                          <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                            <p class="prestaciones-superiores-a">
+                              Modaliad: Presencial
+                            </p>
+                            <p class="prestaciones-superiores-a">
+                              Experiencia necesaria: 2 años como vendedor
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-vacante">
+                      <div class="hace-30-das" name="Fecha">Hace 30 días</div>
+                      <div class="hace-30-das-parent">
+                        <div class="frame-parent3">
+                          <div class="vendedor-tcnico-parent">
+                            <div class="vendedor-tcnico" name="Puesto">
+                              Vendedor técnico
+                            </div>
+                            <div class="centro-jalisco" name="Ubicaion">
+                              Centro, Jalisco
+                            </div>
+                            <div class="centro-jalisco" name="Sueldo">Escolaridad: Licenciatura</div>
+                            <div class="mxn" name="Sueldo">$8,000 MXN</div>
+                          </div>
+                          <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                            <p class="prestaciones-superiores-a">
+                              Modaliad: Presencial
+                            </p>
+                            <p class="prestaciones-superiores-a">
+                              Experiencia necesaria: 2 años como vendedor
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-vacante">
+                      <div class="hace-30-das-parent">
+                        <div class="hace-30-das" name="Fecha">
+                          Hace 30 días
+                        </div>
+                        <div class="frame-parent3">
+                          <div class="vendedor-tcnico-parent">
+                            <div class="vendedor-tcnico" name="Puesto">
+                              Vendedor minorista
+                            </div>
+                            <div class="centro-jalisco" name="Ubicaion">
+                              Centro, Hidalgo
+                            </div>
+                            <div class="centro-jalisco" name="Sueldo">Escolaridad: Licenciatura</div>
+                            <div class="mxn" name="Sueldo">$12,000 MXN</div>
+                          </div>
+                          <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                            <p class="prestaciones-superiores-a">
+                              Modaliad: Presencial
+                            </p>
+                            <p class="prestaciones-superiores-a">
+                              Experiencia necesaria: 2 años como vendedor
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-vacante">
+                      <div class="hace-30-das-parent">
+                        <div class="hace-30-das" name="Fecha">
+                          Hace 30 días
+                        </div>
+                        <div class="frame-parent3">
+                          <div class="vendedor-tcnico-parent">
+                            <div class="vendedor-tcnico" name="Puesto">
+                              Vendedor mayorista
+                            </div>
+                            <div class="centro-jalisco" name="Ubicaion">
+                              Ecatepec, Edo. de México
+                            </div>
+                            <div class="centro-jalisco" name="Sueldo">Escolaridad: Licenciatura</div>
+                            <div class="mxn" name="Sueldo">$10,000 MXN</div>
+                          </div>
+                          <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                            <p class="prestaciones-superiores-a">
+                              Modaliad: Presencial
+                            </p>
+                            <p class="prestaciones-superiores-a">
+                              Experiencia necesaria: 2 años como vendedor
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-vacante">
+                      <div class="hace-30-das" name="Fecha">Hace 30 días</div>
+                      <div class="hace-30-das-parent">
+                        <div class="frame-parent3">
+                          <div class="vendedor-tcnico-parent">
+                            <div class="vendedor-tcnico" name="Puesto">
+                              Vendedor técnico
+                            </div>
+                            <div class="centro-jalisco" name="Ubicaion">
+                              Centro, Jalisco
+                            </div>
+                            <div class="centro-jalisco" name="Sueldo">Escolaridad: Licenciatura</div>
+                            <div class="mxn" name="Sueldo">$8,000 MXN</div>
+                          </div>
+                          <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                            <p class="prestaciones-superiores-a">
+                              Modaliad: Presencial
+                            </p>
+                            <p class="prestaciones-superiores-a">
+                              Experiencia necesaria: 2 años como vendedor
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-vacante">
+                      <div class="hace-30-das-parent">
+                        <div class="hace-30-das" name="Fecha">
+                          Hace 30 días
+                        </div>
+                        <div class="frame-parent3">
+                          <div class="vendedor-tcnico-parent">
+                            <div class="vendedor-tcnico" name="Puesto">
+                              Vendedor minorista
+                            </div>
+                            <div class="centro-jalisco" name="Ubicaion">
+                              Centro, Hidalgo
+                            </div>
+                            <div class="centro-jalisco" name="Sueldo">Escolaridad: No necesaria</div>
+                            <div class="mxn" name="Sueldo">$12,000 MXN</div>
+                          </div>
+                          <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                            <p class="prestaciones-superiores-a">
+                              Modaliad: Presencial
+                            </p>
+                            <p class="prestaciones-superiores-a">
+                              Experiencia necesaria: 2 años como vendedor
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Btn pag  -->
+                <div class="frame-parent15 pagination">
+                  <button class="arrow-back-ios-wrapper prevBtn" onclick="prevPage()" type="submit" value="" name="">
+                    &lt;
+                  </button>
+                  <div class="frame-parent16 pageNumbers">
+                    <div class="wrapper">
+                      <!-- Los botones de número de página se generarán dinámicamente aquí -->
+                    </div>
+                  </div>
+                  <button class="arrow-back-ios-wrapper nextBtn" onclick="nextPage()" type="submit" value="" name="">
+                    &gt;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detail-card  -->
+            <div class="frame-detail-card" style="display: none">
+              <div class="frame-parent-detail-1">
+                <div class="frame-parent-detail-2">
+                  <div class="frame-parent-detail-3">
+                    <div class="frame-parent-detail-4">
+                      <div class="frame-parent-detail-5">
+                        <div class="vendedor-minorista-parent">
+                          <div class="nombre-vacante">Vendedor minorista 
+                            <div class="container-save-share">
+                              <button class="share-btn" type="submit" name="" value=""><img src="/content/genpub/assets/share.svg" alt="Share"/></button>
+                              <button class="save-btn" type="submit" name="" value=""><img src="/content/genpub/assets/save.svg" alt="Save"/></button>
+                            </div>
+                          </div>
+                          <div class="ubicacion">Centro, Jalisco</div>
+                          <div class="mxn-wrapper">
+                            <div class="centro-jalisco" name="Sueldo">Escolaridad: No necesaria</div>
+                            <div class="mxn">$8,000 MXN</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modalidad-presencial-parent">
+                        <div class="modalidad-presencial">
+                          <span class="datos-blod">Modalidad: </span>
+                          <span class="datos-basic">Presencial</span>
+                        </div>
+                        <div class="modalidad-presencial">
+                          <span class="datos-blod">Experiencia:</span>
+                          <span class="datos-basic"> 2 años</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-btns">
+                      <div class="container-btns-desk-save-share">
+                        <button class="share-btn" type="submit" name="" value=""><img src="/content/genpub/assets/share.svg" alt="Share"/></button>
+                        <button class="save-btn" type="submit" name="" value=""><img src="/content/genpub/assets/save.svg" alt="Save"/></button>
+                      </div>
+                      <button class="btn-Post" type="submit" value="" name="">Postularme</button>
+                    </div>
+                  </div>
+                  <div class="line"></div>
+                  <div class="periodo-de-pago-mensual-parent">
+                    <div class="modalidad-presencial">
+                      <span class="datos-blod">Periodo de pago: </span>
+                      <span class="datos-basic">Mensual</span>
+                    </div>
+                    <div class="modalidad-presencial">
+                      <span class="datos-blod">Jornada: </span>
+                      <span class="datos-basic">Tiempo Completo</span>
+                    </div>
+                    <div class="modalidad-presencial">
+                      <span class="datos-blod">Tipo de contratación:</span>
+                      <span class="datos-basic"> Indefinido</span>
+                    </div>
+                    <div class="datos-blod">Descripción:</div>
+                    <div class="datos-basic">
+                      Responsable de interactuar directamente con los clientes
+                      y brindarles un excelente servicio para promover las
+                      ventas y el crecimiento del negocio. Tu objetivo
+                      principal será comprender las necesidades de los
+                      clientes y ofrecerles productos o servicios que
+                      satisfagan sus requerimientos.
+                    </div>
+                  </div>
+                  <div class="habilidades-indispensable-para-parent">
+                    <div class="datos-blod">
+                      Habilidades indispensable para la posición:
+                    </div>
+                    <div class="container-globitos">
+                      <div class="globito">Microsoft Exce/ Intermedio</div>
+                      <div class="globito">Microsoft Exce/ Intermedio</div>
+                      <div class="globito">Intermedio</div>
+                      <div class="globito">Microsoft Exce/ Intermedio</div>
+                      <div class="globito">Intermedio</div>
+                      <div class="globito">Intermedio</div>
+                      <div class="globito">Microsoft Exce/ Intermedio</div>
+                      <div class="globito">Microsoft Exce/ Intermedio</div>
+                      <div class="globito">Microsoft Exce/ Intermedio</div>
+                      <div class="globito">Microsoft Exce/ Intermedio</div>
+                      <div class="globito">Intermedio</div>
+                    </div>
+                  </div>
+                  <div class="prestaciones-superiores-parent">
+                    <div class="datos-blod">Prestaciones superiores:</div>
+                    <div class="container-globitos">
+                      <div class="globito">
+                        Vacaciones/Días de descanso extra
+                      </div>
+                      <div class="globito">Vales de despensa</div>
+                      <div class="globito">Fondo de ahoro</div>
+                      <div class="globito">
+                        Capacitaciones/certificaciones
+                      </div>
+                      <div class="globito">Estacionamiento</div>
+                      <div class="globito">Uniforme</div>
+                      <div class="globito">
+                        Seguro de Gastos Médicos mayores
+                      </div>
+                      <div class="globito">Tarjetas de Regalo</div>
+                      <div class="globito">Seguro Dental</div>
+                      <div class="globito">Bonos</div>
+                      <div class="globito">Comedor</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vacantes-similares-parent">
+                <div class="vacantes-similares">Vacantes similares</div>
+                <div class="card-vacante-mvil-parent">
+                  <div class="card-vacante" id="card">
+                    <div class="hace-30-das-parent">
+                      <div class="hace-30-das" name="Fecha">Hace 30 días</div>
+                      <div class="frame-parent3">
+                        <div class="vendedor-tcnico-parent">
+                          <div class="vendedor-tcnico" name="Puesto">
+                            Vendedor mayorista
+                          </div>
+                          <div class="centro-jalisco" name="Ubicaion">
+                            Ecatepec, Edo. de México
+                          </div>
+                          <div class="centro-jalisco" name="Sueldo">Escolaridad: No necesaria</div>
+                          <div class="mxn" name="Sueldo">$10,000 MXN</div>
+                        </div>
+                        <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                          <p class="prestaciones-superiores-a">
+                            Modaliad: Presencial
+                          </p>
+                          <p class="prestaciones-superiores-a">
+                            Experiencia necesaria: 2 años como vendedor
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-vacante" id="card">
+                    <div class="hace-30-das" name="Fecha">Hace 30 días</div>
+                    <div class="hace-30-das-parent">
+                      <div class="frame-parent3">
+                        <div class="vendedor-tcnico-parent">
+                          <div class="vendedor-tcnico" name="Puesto">
+                            Vendedor técnico
+                          </div>
+                          <div class="centro-jalisco" name="Ubicaion">
+                            Centro, Jalisco
+                          </div>
+                          <div class="centro-jalisco" name="Sueldo">Escolaridad: No necesaria</div>
+                          <div class="mxn" name="Sueldo">$8,000 MXN</div>
+                        </div>
+                        <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                          <p class="prestaciones-superiores-a">
+                            Modaliad: Presencial
+                          </p>
+                          <p class="prestaciones-superiores-a">
+                            Experiencia necesaria: 2 años como vendedor
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-vacante" id="card">
+                    <div class="hace-30-das-parent">
+                      <div class="hace-30-das" name="Fecha">Hace 30 días</div>
+                      <div class="frame-parent3">
+                        <div class="vendedor-tcnico-parent">
+                          <div class="vendedor-tcnico" name="Puesto">
+                            Vendedor minorista
+                          </div>
+                          <div class="centro-jalisco" name="Ubicaion">
+                            Centro, Hidalgo
+                          </div>
+                          <div class="centro-jalisco" name="Sueldo">Escolaridad: No necesaria</div>
+                          <div class="mxn" name="Sueldo">$12,000 MXN</div>
+                        </div>
+                        <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                          <p class="prestaciones-superiores-a">
+                            Modaliad: Presencial
+                          </p>
+                          <p class="prestaciones-superiores-a">
+                            Experiencia necesaria: 2 años como vendedor
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vector-parent">
+          <div class="vector-Css"></div>
+
+          <!-- Footer  -->
+          <div class="frame-parent17">
+            <div class="encuntranos-en-parent">
+              <b class="div">Encuéntranos en:</b>
+              <div class="frame-parent18">
+                <div class="facebook-parent">
+                  <img class="facebook-icon" alt="" src="/content/genpub/assets/FB-PZ.svg"/>
+
+                  <div class="people-zone">@People_zone</div>
+                </div>
+                <div class="facebook-parent">
+                  <img class="facebook-icon" alt="" src="/content/genpub/assets/TT-PZ.svg"/>
+
+                  <div class="people-zone">@People_zone</div>
+                </div>
+                <div class="facebook-parent">
+                  <img class="facebook-icon" alt="" src="/content/genpub/assets/IG-PZ.svg"/>
+
+                  <div class="people-zone">@People_zone</div>
+                </div>
+                <div class="facebook-parent">
+                  <img class="facebook-icon" alt="" src="/content/genpub/assets/IN-PZ.svg"/>
+
+                  <div class="people-zone">@People_zone</div>
+                </div>
+              </div>
+            </div>
+            <div class="logo-parent">
+              <div class="logo">
+                <img class="capa-1-icon" alt="" src="/content/genpub/assets/PeopleZoneLog.svg"/>
+              </div>
+              <div class="politica-de-privacidad-parent">
+                <div class="politica-de-privacidad">
+                  Politica de privacidad
+                </div>
+                <div class="politica-de-privacidad">Condiciones de uso</div>
+                <div class="politica-de-privacidad">Preguntas Frecuentes</div>
+                <div class="politica-de-privacidad">Contacto</div>
+              </div>
+              <div class="av-insurgentes-sur-605-pb-n-parent">
+                <div class="av-insurgentes-sur-container">
+                  <p class="av-insurgentes-sur">
+                    Av. Insurgentes Sur #605 PB
+                  </p>
+                  <p class="prestaciones-superiores-a">
+                    Nápoles, Benito Juárez C.P 03810, Ciudad de México
+                  </p>
+                </div>
+                <div class="people-zone1">
+                  Copyrigth © 2022 Peoplezone Powered by: Peoplezone
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Multifiltro -->
+  <script>
+    const cardsPerPage = 12;
+    let allCards = document.querySelectorAll(".card-vacante");
+    let filteredCards = [...allCards];
+    let totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+    let currentPageIndex = 0;
+
+    function filterCards() {
+      const sueldo = document.querySelector("select[name='sueldo']").value;
+      const modalidad = document.querySelector(
+        "select[name='Modalidad']"
+      ).value;
+      const ubicacion = document.querySelector(
+        "select[name='Ubicacion']"
+      ).value;
+      const categoria = document.querySelector(
+        "select[name='Categoria']"
+      ).value;
+      const fecha = document.querySelector(
+        "select[name='FechaPublicacion']"
+      ).value;
+
+      filteredCards = [...allCards].filter((card) => {
+        const cardSueldo = card.querySelector(".mxn").textContent.trim();
+        const cardModalidad = card
+          .querySelector(".centro-jalisco")
+          .textContent.trim();
+        const cardUbicacion = card
+          .querySelector(".centro-jalisco")
+          .textContent.trim();
+        const cardCategoria = card
+          .querySelector(".vendedor-tcnico")
+          .textContent.trim();
+        const cardFecha = card
+          .querySelector(".hace-30-das")
+          .textContent.trim();
+
+        return (
+          (sueldo === "" || cardSueldo === sueldo) &&
+          (modalidad === "" || cardModalidad === modalidad) &&
+          (ubicacion === "" || cardUbicacion === ubicacion) &&
+          (categoria === "" || cardCategoria === categoria) &&
+          (fecha === "" || cardFecha === fecha)
+        );
+      });
+
+      totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+      currentPageIndex = 0;
+      createPageNumbers();
+      showPage(currentPageIndex);
+    }
+
+    function showPage(index) {
+      const startIndex = index * cardsPerPage;
+      const endIndex = startIndex + cardsPerPage;
+      const currentPageCards = filteredCards.slice(startIndex, endIndex);
+
+      allCards.forEach((card) => {
+        if (currentPageCards.includes(card)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      currentPageIndex = index;
+      updatePagination();
+
+      window.scrollTo(0, 0);
+    }
+
+    function nextPage() {
+      currentPageIndex++;
+      if (currentPageIndex >= totalPages) {
+        addNewPage();
+      } else {
+        showPage(currentPageIndex);
+      }
+    }
+
+    function prevPage() {
+      currentPageIndex--;
+      if (currentPageIndex < 0) {
+        currentPageIndex = 0;
+      }
+      showPage(currentPageIndex);
+    }
+
+    function addNewPage() {
+      const newPage = document.createElement("div");
+      newPage.className = "frame-parent2 page";
+      newPage.id = "page" + (totalPages + 1);
+
+      const newTextFielParent = document.createElement("div");
+      newTextFielParent.className = "text-fiel-parent";
+      newPage.appendChild(newTextFielParent);
+
+      document.querySelector(".frame-parent2").appendChild(newPage);
+      totalPages++;
+      createPageNumbers();
+      showPage(currentPageIndex);
+    }
+
+    function createPageNumbers() {
+      const pageNumbersWrapper = document.querySelector(
+        ".pageNumbers .wrapper"
+      );
+      pageNumbersWrapper.innerHTML = "";
+
+      const maxVisiblePages = 12; // Define el máximo de páginas visibles antes de mostrar los puntos suspensivos
+
+      if (totalPages <= maxVisiblePages) {
+        // Si el total de páginas es menor o igual al máximo de páginas visibles, mostrar todas las páginas sin puntos suspensivos
+        for (let i = 0; i < totalPages; i++) {
+          addPageNumberButton(pageNumbersWrapper, i);
+        }
+      } else {
+        // Si el total de páginas es mayor al máximo de páginas visibles, mostrar los puntos suspensivos
+        const visiblePages = [];
+        let startIndex = 0;
+        let endIndex = totalPages - 1;
+
+        if (currentPageIndex >= maxVisiblePages - 2) {
+          startIndex =
+            currentPageIndex - Math.floor((maxVisiblePages - 3) / 2);
+          if (startIndex > 0) {
+            const dotsStart = createDots();
+            pageNumbersWrapper.appendChild(dotsStart);
+          }
+        }
+
+        if (currentPageIndex <= totalPages - maxVisiblePages + 2) {
+          endIndex = startIndex + maxVisiblePages - 3;
+        } else {
+          endIndex = totalPages - 1;
+          if (endIndex > startIndex + maxVisiblePages - 3) {
+            const dotsEnd = createDots();
+            pageNumbersWrapper.appendChild(dotsEnd);
+          }
+        }
+
+        for (let i = startIndex; i <= endIndex; i++) {
+          visiblePages.push(i);
+        }
+
+        visiblePages.forEach((pageIndex) => {
+          addPageNumberButton(pageNumbersWrapper, pageIndex);
+        });
+
+        if (endIndex < totalPages - 1) {
+          const dotsLast = createDots();
+          pageNumbersWrapper.appendChild(dotsLast);
+        }
+      }
+    }
+
+    function addPageNumberButton(parentElement, pageIndex) {
+      const pageNumber = document.createElement("button");
+      pageNumber.className = "pageNumber btnpg";
+      pageNumber.textContent = pageIndex + 1;
+      pageNumber.onclick = function () {
+        showPage(pageIndex);
+      };
+      parentElement.appendChild(pageNumber);
+    }
+
+    function createDots() {
+      const dots = document.createElement("span");
+      dots.textContent = "...";
+      dots.className = "dots";
+      return dots;
+    }
+
+    function updatePagination() {
+      const pageNumbers = document.querySelectorAll(".pageNumber");
+
+      for (let i = 0; i < pageNumbers.length; i++) {
+        if (i === currentPageIndex) {
+          pageNumbers[i].classList.add("active");
+        } else {
+          pageNumbers[i].classList.remove("active");
+        }
+      }
+
+      const prevBtn = document.querySelector(".prevBtn");
+      const nextBtn = document.querySelector(".nextBtn");
+
+      if (currentPageIndex === 0) {
+        prevBtn.disabled = true;
+      } else {
+        prevBtn.disabled = false;
+      }
+
+      if (currentPageIndex === totalPages - 1) {
+        nextBtn.disabled = true;
+      } else {
+        nextBtn.disabled = false;
+      }
+    }
+
+    createPageNumbers();
+    showPage(currentPageIndex);
+
+    // Función para filtrar las vacantes
+    function buscarVacantes(titulo) {
+      const searchTerm = titulo.trim().toLowerCase();
+
+      filteredCards = [...allCards].filter((card) => {
+        const cardTitle = card
+          .querySelector(".vendedor-tcnico")
+          .textContent.toLowerCase();
+        return cardTitle.includes(searchTerm);
+      });
+
+      totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+      currentPageIndex = 0;
+      createPageNumbers();
+      showPage(currentPageIndex);
+    }
+
+    // Función para remover acentos en el texto
+    function removerAcentos(texto) {
+      return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+  </script>
+
+  <!-- Script detail-card -->
+  <script>
+    var frameParent1 = document.querySelector(".frame-parent1");
+
+    var cards = document.getElementsByClassName("card-vacante");
+
+    var frameDetailCard = document.querySelector(".frame-detail-card");
+
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].addEventListener("click", function () {
+        frameParent1.style.display = "none";
+
+        frameDetailCard.style.display = "block";
+      });
+    }
+        SelectDinamico("Areas","",{p1:""},0,"Areas","",function(){
+            console.log("Aqui agregadno");
+            $('<option/>').val("Categoría").html("Categoría").prop('selected', true).prependTo('#Areas');});
+      
+  </script>
