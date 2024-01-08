@@ -1,0 +1,1022 @@
+
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&amp;display=swap">
+    <style>
+      .container-vacantes{
+        display: flex;
+        flex-direction: column;
+      }
+      .container-btn {
+        display: flex;
+        gap: 20px;
+      }
+      .arrow-back-icon {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 30px;
+        cursor: pointer;
+      }
+
+      .mis-vacantesactiva-child {
+        width: 1200px;
+        height: 964px;
+      }
+
+      .siguiente {
+        position: relative;
+        letter-spacing: 0.01em;
+        line-height: 24px;
+        font-weight: 600;
+      }
+
+      .boton-principal {
+        align-self: stretch;
+        flex: 1;
+        border-radius: 8px;
+        background-color: #589ed6;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 32px;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      .boton-principal:hover {
+        background-color: #368dd4;
+      }
+
+      .boton-atrs {
+        width: 178px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 16px;
+        color: #fff;
+      }
+
+      .placeholder-wrapper {
+        align-self: stretch;
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 6px 12px;
+        flex: 1;
+        font-size: 16px;
+        font-family: Inter;
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        outline: none;
+      }
+
+      .placeholder-wrapper:focus {
+        border: 1px solid #589ed6;
+      }
+
+      .text-fiel {
+        width: 574px;
+        height: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 16px;
+        color: #898c8f;
+      }
+
+      .mis-vacantes {
+        font-size: 24px;
+        letter-spacing: -0.01em;
+        line-height: 24px;
+        font-weight: 500;
+        color: #313436;
+        display: flex;
+        align-items: center;
+        width: 178px;
+        margin-bottom: 24px;
+      }
+
+      .botn-buscar-talento {
+        border-radius: 8px;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 178px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 16px;
+        color: #589ed6;
+        cursor: pointer;
+        background-color: transparent;
+      }
+
+      .botn-buscar-talento:hover {
+        background-color: #368dd4;
+        color: #ffffff;
+      }
+      .container-id {
+        width: 79px;
+        height: 54px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 0;
+      }
+
+      .container-bolsa {
+        width: 140px;
+        height: 54px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 1;
+      }
+
+      .coordinador-de-estrategias {
+        align-self: stretch;
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 18px;
+      }
+
+      .visibility-icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .visibility-parent {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0px 8px;
+        gap: 4px;
+        text-align: center;
+        color: #202325;
+      }
+
+      .container-ubicacin {
+        width: 178px;
+        height: 54px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 36px;
+        box-sizing: border-box;
+        z-index: 3;
+      }
+
+      .container-postulados {
+        width: 107px;
+        height: 54px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 4;
+        font-size: 16px;
+        color: #589ed6;
+      }
+
+      .activa {
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 18px;
+      }
+
+      .container-estatus {
+        background-color: #fcfdfe;
+        width: 105px;
+        height: 54px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 5;
+        font-size: 16px;
+      }
+
+      .acciones-icon {
+        width: 20px;
+        height: 20px;
+        z-index: 6;
+      }
+
+      .container-vacante {
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 970px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 16px 0px;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .miguel-hidalgo-cdmx1 {
+        flex: 1;
+        position: relative;
+        letter-spacing: 0.5px;
+        line-height: 16px;
+      }
+
+      .container-ubicacin2 {
+        width: 178px;
+        height: 54px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 36px;
+        box-sizing: border-box;
+        z-index: 3;
+        text-align: left;
+      }
+
+      .container-ubicacin4 {
+        height: 54px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 36px;
+        box-sizing: border-box;
+        z-index: 3;
+        text-align: left;
+      }
+
+      .id {
+        width: 79px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        box-sizing: border-box;
+        z-index: 0;
+      }
+
+      .bolsa-de-empleo {
+        position: relative;
+        letter-spacing: -0.5px;
+        line-height: 16px;
+        font-weight: 600;
+      }
+
+      .bolsa-empleo {
+        width: 140px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        box-sizing: border-box;
+        z-index: 1;
+      }
+
+      .vacante {
+        width: 145px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        box-sizing: border-box;
+        z-index: 2;
+      }
+
+      .ubicacin {
+        width: 178px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        box-sizing: border-box;
+        z-index: 3;
+      }
+
+      .postulados {
+        width: 178px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        box-sizing: border-box;
+        z-index: 4;
+      }
+
+      .header {
+        background-color: #fcfdfe;
+        width: 138px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      .activa5 {
+        flex: 1;
+        position: relative;
+        letter-spacing: -0.5px;
+        line-height: 18px;
+      }
+
+      .listado-estatus {
+        background-color: #fcfdfe;
+        width: 138px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+
+      .panel {
+        border: 1px solid #e4eaee;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+      }
+      .panel .listado-estatus:hover {
+        background-color: #589ed6;
+        color: #ffffff;
+      }
+      .dropdown-estatus {
+        border-radius: 8px;
+        height: 40px;
+        /* overflow: hidden; */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        z-index: 7;
+      }
+
+      .container-descripciones {
+        border-radius: 8px;
+        background-color: #fcfdfe;
+        border: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 970px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 16px 0px;
+        gap: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: #505253;
+      }
+
+      .atras {
+        border-radius: 10px;
+        border: 1px solid #589ed6;
+        box-sizing: border-box;
+        width: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+      }
+
+      .div15 {
+        border-radius: 30px;
+        background-color: #589ed6;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        color: #fcfdfe;
+      }
+
+      .puntos {
+        border-radius: 30px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .nmeros {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .variantes-pagination {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 24px;
+        box-sizing: border-box;
+        gap: 24px;
+        text-align: center;
+        font-size: 16px;
+        color: #898c8f;
+        margin-top: 80px;
+      }
+
+      .capa-1-icon1 {
+        position: relative;
+        width: 180px;
+        height: 40px;
+      }
+
+      .notifications-icon {
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+      }
+
+      .wrapper {
+        border-radius: 8px;
+        background-color: #589ed6;
+        border: 2px solid #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 4px;
+      }
+
+      .chat-bubble-outline-icon {
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+      }
+
+      .notifications-parent {
+        position: relative;
+        width: 111px;
+        height: 36px;
+      }
+
+      .mis-vacantesactiva {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: #fcfdfe;
+        width: 100%;
+        height: 1044px;
+        text-align: left;
+        font-size: 14px;
+        color: #202325;
+        font-family: Inter;
+      }
+
+      body {
+        margin: 0;
+        line-height: normal;
+      }
+
+      .container-inpt {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+    </style>
+    <!-- SIDEBARCSS  -->
+    <style>
+      .visualizacin-de-perfil-candid-child {
+        width: 320px;
+        height: 100%;
+        overflow: hidden;
+        font-size: 14px;
+        color: #313336;
+        font-family: "Inter";
+      }
+
+      .sidebar {
+        background-color: #fff;
+        border-right: 1px solid #e4eaee;
+        box-sizing: border-box;
+        width: 240px;
+        height: 100%;
+        overflow: hidden;
+        color: #313436;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .container-profile {
+        display: flex;
+        width: 189px;
+        height: 45px;
+        border-radius: 8px;
+        background: var(--grises-300, #e4eaee);
+        padding: 8px 12px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-left: 10px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+
+      .group-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .mara-hernndez-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2px;
+      }
+
+      .mara-hernndez {
+        position: relative;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+      }
+
+      .jmpeoplezonecom {
+        position: relative;
+        font-size: 10px;
+        letter-spacing: -0.01em;
+        color: #898c8f;
+      }
+
+      .vector-css {
+        width: 100%;
+        height: 1px;
+        background-color: #e4eaee;
+      }
+
+      .div6 {
+        width: 240px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .div6:focus {
+        background-color: gray;
+      }
+
+      .keyboard-arrow-down-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+      .arrows-icon {
+        cursor: pointer;
+        width: 21px;
+        height: 21px;
+      }
+      .div1 {
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .div2 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div3 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div4 {
+        border-radius: 8px;
+        width: 204px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        color: #898c8f;
+        cursor: pointer;
+      }
+
+      .div5 {
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px 8px 25px;
+        box-sizing: border-box;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #f0f0f0;
+        overflow-y: auto;
+      }
+    </style>
+    <style>
+      @media screen and (max-width: 767px) {
+        .container-inpt {
+          flex-direction: column;
+        }
+        .visualizacin-de-perfil-candid-child {
+          display: none;
+        }
+        .mis-vacantesactiva-child {
+          width: 100%;
+          height: 964px;
+          display: flex;
+          flex-direction: column;
+          margin-top: 27px;
+          padding-left: 32px;
+        }
+        .container-btn {
+          display: flex;
+          gap: 20px;
+        }
+        .text-fiel {
+          width: 329px;
+        }
+        .container-vacantes {
+          overflow-y: auto;
+        }
+        .mis-vacantesactiva {
+          align-items: flex-start;
+          height: auto;
+        }
+        .boton-principal {
+          padding: 0px;
+        }
+      .ipt {
+        display: flex;
+        width: 100%;
+        align-items: center;
+      }
+      .boton-atrs {
+        width: 154px;
+      }
+      .botn-buscar-talento {
+        width: 154px; 
+      }
+      }
+    </style>
+  
+
+  
+    <div class="mis-vacantesactiva">
+      <!-- SIDEBAR -->
+      <div class="visualizacin-de-perfil-candid-child">
+        <aside class="sidebar">
+          <div class="wrapper-all">
+            <div class="container-profile">
+              <img class="group-icon" alt="" src="/content/genpub/assets/ImgProfile.svg"/>
+              <div class="mara-hernndez-parent">
+                <div class="mara-hernndez">María Hernández</div>
+                <div class="jmpeoplezonecom">jm@peoplezone.com</div>
+              </div>
+            </div>
+            <div class="vector-css"></div>
+            <div class="container-top-btns">
+              <div class="div6">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/homeNavBar.svg"/>
+
+                <div class="div">Inicio</div>
+              </div>
+              <div class="div1">
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/List.svg"/>
+
+                <div class="div">Mis Vacantes</div>
+              </div>
+              <div class="container">
+                <div class="div5">
+                  <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/credits.svg"/>
+
+                  <div class="div">Créditos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-bottom-btns">
+            <div class="vector-css"></div>
+
+            <div class="div2">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/settings.svg"/>
+
+              <div class="div">Configuración</div>
+            </div>
+            <div class="div3">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/help.svg"/>
+
+              <div class="div">Ayuda</div>
+            </div>
+            <div class="div4">
+              <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/exit.svg"/>
+
+              <div class="div">Salir</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="mis-vacantesactiva-child">
+        <img class="arrow-back-icon" alt="" src="/content/genpub/assets/back-arrow.svg"/>
+
+        <div class="container-inpt">
+          <div class="ipt">
+            <div class="text-fiel">
+              <input type="text" class="placeholder-wrapper" placeholder="Buscar vacante"/>
+            </div>
+          </div>
+          <div class="container-btn">
+            <div class="boton-atrs">
+              <button class="boton-principal" type="submit" value="" name="">
+                <div class="siguiente">Crear vacante</div>
+              </button>
+            </div>
+            <button class="botn-buscar-talento" type="submit" value="" name="">
+              <div class="siguiente">Buscar talento</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="mis-vacantes">Mis vacantes</div>
+        <div class="container-vacantes">
+          <div class="container-descripciones">
+            <div class="id">
+              <div class="bolsa-de-empleo">ID</div>
+            </div>
+            <div class="vacante">
+              <div class="bolsa-de-empleo">Vacante</div>
+            </div>
+            <div class="ubicacin">
+              <div class="bolsa-de-empleo">Ubicación</div>
+            </div>
+            <div class="postulados">
+              <div class="bolsa-de-empleo">Postulados</div>
+            </div>
+            <div class="dropdown-estatus">
+              <div class="header" id="header">
+                <div class="bolsa-de-empleo">Estatus</div>
+                <img class="keyboard-arrow-down-icon" alt="" src="/content/genpub/assets/down-arrow.svg"/>
+              </div>
+              <div class="panel" id="panel">
+                <div class="listado-estatus">
+                  <div class="activa5">Activa</div>
+                </div>
+                <div class="listado-estatus">
+                  <div class="activa5">Pausada</div>
+                </div>
+                <div class="listado-estatus">
+                  <div class="activa5">Expirada</div>
+                </div>
+                <div class="listado-estatus">
+                  <div class="activa5">Archivada</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-vacante">
+            <div class="container-id">
+              <div class="div">137</div>
+            </div>
+
+            <div class="container-vacante1">
+              <div class="coordinador-de-estrategias">Vendedor Mayorista</div>
+              <div class="visibility-parent">
+                <img class="visibility-icon" alt="" src="/content/genpub/assets/eye.svg"/>
+
+                <div class="div1">150</div>
+              </div>
+            </div>
+            <div class="container-ubicacin">
+              <div class="div">Ecatepec, Edomex</div>
+            </div>
+            <div class="container-postulados">
+              <div class="activa">89</div>
+            </div>
+            <div class="container-estatus">
+              <div class="activa">Activa</div>
+            </div>
+            <img class="acciones-icon" alt="" src="/content/genpub/assets/dots.svg"/>
+          </div>
+          <div class="container-vacante">
+            <div class="container-id">
+              <div class="div">137</div>
+            </div>
+
+            <div class="container-vacante1">
+              <div class="coordinador-de-estrategias">Vendedor Mayorista</div>
+              <div class="visibility-parent">
+                <img class="visibility-icon" alt="" src="/content/genpub/assets/eye.svg"/>
+
+                <div class="div1">150</div>
+              </div>
+            </div>
+            <div class="container-ubicacin">
+              <div class="div">Ecatepec, Edomex</div>
+            </div>
+            <div class="container-postulados">
+              <div class="activa">89</div>
+            </div>
+            <div class="container-estatus">
+              <div class="activa">Activa</div>
+            </div>
+            <img class="acciones-icon" alt="" src="/content/genpub/assets/dots.svg"/>
+          </div>
+          <div class="container-vacante">
+            <div class="container-id">
+              <div class="div">137</div>
+            </div>
+
+            <div class="container-vacante1">
+              <div class="coordinador-de-estrategias">Vendedor Mayorista</div>
+              <div class="visibility-parent">
+                <img class="visibility-icon" alt="" src="/content/genpub/assets/eye.svg"/>
+
+                <div class="div1">150</div>
+              </div>
+            </div>
+            <div class="container-ubicacin">
+              <div class="div">Ecatepec, Edomex</div>
+            </div>
+            <div class="container-postulados">
+              <div class="activa">89</div>
+            </div>
+            <div class="container-estatus">
+              <div class="activa">Activa</div>
+            </div>
+            <img class="acciones-icon" alt="" src="/content/genpub/assets/dots.svg"/>
+          </div>
+          <div class="container-vacante">
+            <div class="container-id">
+              <div class="div">137</div>
+            </div>
+
+            <div class="container-vacante1">
+              <div class="coordinador-de-estrategias">Vendedor Mayorista</div>
+              <div class="visibility-parent">
+                <img class="visibility-icon" alt="" src="/content/genpub/assets/eye.svg"/>
+
+                <div class="div1">150</div>
+              </div>
+            </div>
+            <div class="container-ubicacin">
+              <div class="div">Ecatepec, Edomex</div>
+            </div>
+            <div class="container-postulados">
+              <div class="activa">89</div>
+            </div>
+            <div class="container-estatus">
+              <div class="activa">Activa</div>
+            </div>
+            <img class="acciones-icon" alt="" src="/content/genpub/assets/dots.svg"/>
+          </div>
+          
+        </div>
+
+        <div class="variantes-pagination">
+          <div class="atras">
+            <img class="arrows-icon" alt="" src="/content/genpub/assets/arrow-left.svg"/>
+          </div>
+          <div class="nmeros">
+            <div class="div15">
+              <div class="encuntranos-en">1</div>
+            </div>
+            <div class="puntos">
+              <div class="encuntranos-en">2</div>
+            </div>
+            <div class="puntos">
+              <div class="encuntranos-en">3</div>
+            </div>
+            <div class="puntos">
+              <div class="encuntranos-en">...</div>
+            </div>
+            <div class="puntos">
+              <div class="encuntranos-en">15</div>
+            </div>
+          </div>
+          <div class="atras">
+            <img class="arrows-icon" alt="" src="/content/genpub/assets/rigth-arrow.svg"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var header = document.getElementById("header");
+      var panel = document.getElementById("panel");
+      header.addEventListener("click", function () {
+        if (panel.style.display === "flex") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "flex";
+        }
+      });
+    </script>
+  

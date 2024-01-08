@@ -1,0 +1,1604 @@
+
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&amp;display=swap">
+    <style>
+      body {
+        margin-left: 33px;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: #308cd8;
+      }
+      .mis-postulaciones {
+        color: var(--grises-900, #202325);
+        font-family: "Inter";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 66.667% */
+        letter-spacing: -0.36px;
+      }
+      .mis-postulaciones-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 28px;
+      }
+      .te-has-postulado {
+        color: var(--principal-300, #589ed6);
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.16px;
+        width: 100%;
+      }
+      .te-has-postulado-a-5-diferente-wrapper {
+        width: 313px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .check-circle-parent {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        color: var(--principal-300);
+      }
+      .mensajes-wrapper {
+        cursor: pointer;
+      }
+      .mensajes-wrapper {
+        border-radius: 8px;
+        background: #589ed6;
+        display: flex;
+        padding: 12px;
+        align-items: flex-start;
+        gap: 10px;
+        color: #fff;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: none;
+      }
+      .frame-parent1,
+      .frame-parent2 {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--gap-9xl);
+      }
+      .frame-parent2 {
+        align-self: stretch;
+        flex-direction: row;
+        align-items: center;
+        font-size: var(--heading-h5-small-regular-size);
+        color: var(--color-white);
+      }
+      .frame-parent1 {
+        width: 100%;
+        flex-direction: row;
+        padding: 0 0 var(--padding-29xl);
+        box-sizing: border-box;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .te-postulaste-hace1 {
+        position: relative;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        width: 306px;
+        flex-shrink: 0;
+      }
+      .check-circle-container,
+      .te-postulaste-hace-30-das-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .te-postulaste-hace-30-das-group {
+        justify-content: flex-start;
+        gap: var(--gap-xl);
+        text-align: right;
+        font-size: var(--overline-semi-bold-size);
+      }
+      .vendedor-tcnico2 {
+        position: relative;
+        font-weight: 600;
+        color: var(--color-black);
+      }
+      .ciudad-de-mxico1,
+      .mxn2 {
+        position: relative;
+        font-size: var(--caption-regular-size);
+      }
+      .mxn2 {
+        font-size: var(--paragraph-p03-medium-size);
+      }
+      .vendedor-tcnico-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--gap-2xs);
+        color: var(--grises-900);
+      }
+      .span3 {
+        font-weight: 500;
+      }
+      .experiencia-necesaria2 {
+        font-family: var(--heading-h5-small-regular);
+      }
+      .tipo-de-contratacin-presenci-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--gap-9xs);
+        font-size: var(--caption-regular-size);
+        color: var(--grises-500);
+      }
+      .frame-wrapper3 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        color: var(--color-white);
+      }
+      .frame-parent5 {
+        flex-direction: column;
+        gap: var(--gap-xl);
+      }
+      .ficha-postulacion-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 41px;
+      }
+      .frame-parent4 {
+        flex-direction: column;
+        gap: 41px;
+      }
+      .frame-parent4,
+      .frame-wrapper1,
+      .frame-wrapper2 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .frame-wrapper2 {
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .frame-wrapper1 {
+        width: 100%;
+        flex-direction: row;
+      }
+      .da-clic-a {
+        align-self: stretch;
+        color: var(--grises-500, #898c8f);
+        text-align: center;
+        font-family: "Inter";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      .frame-child,
+      .frame-icon {
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .frame-icon {
+        width: 412.64px;
+        height: 447.64px;
+      }
+      .frame-child {
+        align-self: stretch;
+        max-width: 100%;
+        height: 0.5px;
+      }
+      .da-clic-a-tu-postulacin-parent {
+        width: 483px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 var(--padding-29xl);
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        gap: 78px;
+      }
+      .frame-parent3,
+      .frame-wrapper6 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .frame-wrapper6 {
+        border-radius: var(--br-5xs);
+        background-color: var(--grises-50);
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        width: 570px;
+        overflow: hidden;
+        flex-shrink: 0;
+        padding: var(--padding-29xl) var(--padding-9xl) var(--padding-9xl);
+        box-sizing: border-box;
+        text-align: center;
+        font-size: var(--heading-h2-small-medium-size);
+        color: var(--grises-500);
+      }
+      .frame-parent3 {
+        gap: 20px;
+        font-size: var(--heading-h5-small-regular-size);
+        color: var(--principal-300);
+      }
+      .hace-30-das1,
+      .vacantes-similares {
+        position: relative;
+        display: inline-block;
+      }
+      .vacantes-similares {
+        color: var(--grises-800, #313436);
+        font-family: "Inter";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        width: auto;
+      }
+      .hace-30-das1 {
+        width: 85px;
+      }
+      .vendedor-tcnico5 {
+        font-size: var(--heading-h5-small-regular-size);
+        font-weight: 600;
+      }
+      .centro-jalisco1,
+      .mxn5,
+      .vendedor-tcnico5 {
+        align-self: stretch;
+        color: var(--grises-900, #202325);
+        font-family: "Inter";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .mxn5 {
+        font-size: var(--paragraph-p03-medium-size);
+      }
+      .vendedor-tcnico-parent3 {
+        align-self: stretch;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .tipo-de-contratacin1 {
+        font-weight: 600;
+      }
+      .experiencia-necesaria5,
+      .span6 {
+        font-weight: 500;
+        font-family: var(--heading-h5-small-regular);
+      }
+      .experiencia-necesaria5 {
+        font-weight: 600;
+      }
+      .tipo-de-contratacin-container5 {
+        align-self: stretch;
+        position: relative;
+        font-size: var(--caption-regular-size);
+        color: var(--color-gray-100);
+      }
+      .frame-parent8 {
+        width: 324px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 var(--padding-base);
+        box-sizing: border-box;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--gap-5xl);
+        text-align: left;
+        color: var(--negros-600);
+      }
+      .card-vacante-mvil,
+      .card-vacante-mvil2,
+      .hace-30-das-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+      }
+      .hace-30-das-group {
+        gap: var(--gap-5xs);
+      }
+      .card-vacante-mvil,
+      .card-vacante-mvil2 {
+        border-radius: var(--br-5xs);
+        background-color: var(--grises-50);
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        width: 361px;
+        padding: var(--padding-5xl) var(--padding-base);
+        box-sizing: border-box;
+      }
+      .card-vacante-mvil2 {
+        width: 382px;
+      }
+      .card-vacante-mvil-parent {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px;
+        font-size: var(--overline-semi-bold-size);
+        color: var(--principal-300);
+        overflow-x: scroll;
+        cursor: grab;
+        -webkit-overflow-scrolling: touch;
+        padding: 7px;
+      }
+      .card-vacante-mvil-parent.grabbing {
+        cursor: grabbing;
+      }
+      .frame-div {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .vacantes-similares-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 1122px;
+        padding: var(--padding-base) var(--padding-13xl) var(--padding-29xl);
+        gap: 8px;
+        font-size: var(--paragraph-p03-medium-size);
+        color: var(--grises-800);
+      }
+      .frame-div {
+        width: 1123px;
+        margin-bottom: 48px;
+        padding: 0 var(--padding-59xl) 0 0;
+      }
+      .frame-item {
+        left: calc(50% - 522.5px);
+        width: 1052px;
+        height: 1px;
+      }
+      .frame-parent12 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .frame-parent12 {
+        gap: var(--gap-5xl);
+        font-size: var(--heading-h5-small-regular-size);
+        font-family: var(--heading-h5-small-regular);
+      }
+      .frame-parent11 {
+        width: 1059px;
+        height: 445px;
+      }
+      .vector-parent {
+        position: relative;
+        width: 100%;
+        height: 563px;
+        font-size: var(--heading-h4-small-medium-size);
+        color: var(--color-black);
+        font-family: var(--font-mulish);
+        margin-top: 50px;
+      }
+      .frame-container,
+      .mis-postulaciones-versin-desk-inner {
+        width: 1125px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .frame-container {
+        /* height: 2154px; */
+        flex-shrink: 0;
+        padding: var(--padding-59xl) 0 0;
+        box-sizing: border-box;
+        align-items: flex-start;
+        gap: var(--gap-6xl);
+      }
+      .mis-postulaciones-versin-desk-inner {
+        height: auto;
+        font-size: var(--font-size-17xl);
+      }
+      .notifications-icon {
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+      }
+      .div {
+        position: relative;
+        letter-spacing: -0.02em;
+        font-weight: 500;
+      }
+      .wrapper {
+        border-radius: var(--br-5xs);
+        background-color: var(--principal-300);
+        border: 2px solid var(--color-white);
+        display: flex;
+        flex-direction: column;
+        padding: var(--padding-9xs);
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .chat-bubble-outline-icon {
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+      }
+      .notifications-parent {
+        position: relative;
+        width: 111px;
+        height: 36px;
+      }
+      .assignment-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .div1,
+      .div2,
+      .div3,
+      .div4 {
+        border-radius: var(--br-5xs);
+        width: 133px;
+        display: flex;
+        flex-direction: row;
+        padding: var(--padding-5xs);
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--gap-5xs);
+      }
+      .div2,
+      .div3,
+      .div4 {
+        top: 792px;
+        width: 204px;
+        color: var(--grises-500);
+      }
+      .div3,
+      .div4 {
+        top: 832px;
+      }
+      .div4 {
+        top: 872px;
+      }
+      .jmpeoplezonecom,
+      .mara-hernndez {
+        position: relative;
+        letter-spacing: -0.01em;
+      }
+      .mara-hernndez {
+        font-weight: 600;
+      }
+      .jmpeoplezonecom {
+        font-size: var(--overline-semi-bold-size);
+        color: var(--grises-500);
+      }
+      .mara-hernndez-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--gap-11xs);
+      }
+      .container,
+      .div5 {
+        width: 159px;
+      }
+      .div5 {
+        top: 0;
+        left: 0;
+        border-radius: var(--br-5xs);
+        display: flex;
+        flex-direction: row;
+        padding: var(--padding-5xs);
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--gap-5xs);
+      }
+      .container {
+        top: 227px;
+        left: 16px;
+        height: 40px;
+      }
+      .group-icon,
+      .sidebar-inner,
+      .vector-icon {
+        width: 240px;
+        height: 1px;
+      }
+      .group-icon,
+      .vector-icon {
+        top: 101.5px;
+        left: 0.5px;
+      }
+      .group-icon {
+        top: 32px;
+        left: 24px;
+        width: 38px;
+        height: 38px;
+      }
+      .div6,
+      .sidebar {
+        box-sizing: border-box;
+        width: 240px;
+      }
+      .div6 {
+        top: 117px;
+        left: -1px;
+        display: flex;
+        flex-direction: row;
+        padding: var(--padding-5xs) var(--padding-5xs) var(--padding-5xs) 25px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--gap-5xs);
+      }
+      .sidebar {
+        top: 80px;
+        left: 0;
+        background-color: var(--color-white);
+        border-right: 1px solid var(--grises-300);
+        height: 944px;
+        overflow: hidden;
+        color: var(--grises-800);
+      }
+      .mis-postulaciones-versin-desk {
+        position: relative;
+        background-color: var(--color-white);
+        width: 100%;
+        height: auto;
+        padding-top: 78px;
+        text-align: left;
+        font-size: var(--paragraph-p03-medium-size);
+        color: var(--grises-900);
+        font-family: var(--heading-h5-small-regular);
+      }
+      .container-btn {
+        display: flex;
+        gap: 28px;
+      }
+      .card-vacante-similares {
+        align-items: flex-end;
+        padding: 28px 48px;
+        gap: 20px;
+        width: 418px;
+        height: 262px;
+        background: #fcfdfe;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+      }
+      .card-vacante-similares:hover {
+        cursor: pointer;
+        box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.15);
+      }
+      .card-vacante-similares,
+      .frame-parent2 {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-vacante {
+        align-items: flex-end;
+        padding: 28px 48px;
+        gap: 20px;
+        width: 432px;
+        height: 346px;
+        background: #fcfdfe;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+      }
+      .card-vacante:hover {
+        cursor: pointer;
+        box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.15);
+      }
+      .card-vacante,
+      .frame-parent2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .frame-parent2 {
+        width: 100%;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        height: 912px;
+        padding: 2px 7px;
+        margin-bottom: 40px;
+      }
+      .card-vacante-mvil-parent::-webkit-scrollbar {
+        display: none;
+      }
+      .frame-parent2::-webkit-scrollbar {
+        display: none;
+      }
+      .hace-30-das {
+        display: flex;
+        width: 100%;
+        height: 12px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: right;
+        color: #589ed6;
+        justify-content: flex-end;
+      }
+      .hace-30-das-same {
+        display: flex;
+        width: 100%;
+        height: 12px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: right;
+        color: #589ed6;
+        justify-content: flex-end;
+      }
+      .hace-30-das-parent {
+        align-items: flex-end;
+        gap: var(--gap-5xs);
+      }
+      .frame-parent3,
+      .hace-30-das-parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .vendedor-tcnico-parent {
+        align-self: stretch;
+        height: 97px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 24px;
+        gap: 11px;
+      }
+      .centro-jalisco,
+      .vendedor-tcnico {
+        align-self: stretch;
+        color: var(--grises-900, #202325);
+        font-family: "Inter";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .mxn {
+        color: var(--grises-900, #202325);
+        font-family: "Inter";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .vendedor-tcnico {
+        width: 325px;
+        height: 20px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.0025em;
+        color: #292929;
+      }
+      .horario-900-1800-prestacion-container {
+        align-self: stretch;
+        position: relative;
+        width: 325px;
+        height: 45px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #787f84;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .prestaciones-superiores-a {
+        margin: 0;
+      }
+      .msj-btn {
+        display: flex;
+        border: none;
+        padding: 12px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 8px;
+        background: #589ed6;
+        color: #fff;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .delete-btn {
+        display: flex;
+        padding: 12px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 8px;
+        background: var(--principal-100, #e6f0f9);
+        color: #589ed6;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: none;
+      }
+      .delete-btn:hover {
+        color: #ffffff;
+        background-color: #308cd8;
+      }
+      .container-btn-msj {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .frame-wrapper5 {
+        display: flex;
+        width: 570px;
+        padding: 48px 28px 28px 28px;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: var(--grises-50, #fcfdfe);
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+    <!-- style footer  -->
+    <style>
+      .vector-Css {
+        width: 100%;
+        background-color: rgba(228, 234, 238, 1);
+        height: 2px;
+        margin-bottom: 50px;
+      }
+      .frame-parent-footer {
+        width: 1168px;
+        height: 445px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+      .encuntranos-en-parent {
+        gap: var(--gap-13xl);
+      }
+      .encuntranos-en-parent,
+      .frame-parent18 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .frame-parent18 {
+        font-size: var(--paragraph-p02-semi-bold-size);
+        font-family: var(--overline-semi-bold);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+        width: 239px;
+        height: 264px;
+      }
+      .div {
+        position: relative;
+        font-family: "Mulish";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 32px;
+      }
+      .facebook-parent {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--gap-21xl);
+      }
+      .facebook-icon {
+        position: relative;
+        width: 48px;
+        height: 48px;
+      }
+      .people-zone {
+        position: relative;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        margin-left: 40px;
+      }
+      .capa-1-icon {
+        position: relative;
+        width: 288px;
+        height: 64px;
+      }
+      .logo {
+        display: flex;
+        flex-direction: column;
+        padding: var(--padding-5xs);
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 48px;
+      }
+      .politica-de-privacidad {
+        position: relative;
+        font-weight: 600;
+      }
+      .politica-de-privacidad-parent {
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--gap-5xl);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+        width: 214px;
+        height: 168px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+        margin-bottom: 48px;
+      }
+      .av-insurgentes-sur {
+        margin-block-start: 0;
+        margin-block-end: 12px;
+      }
+      .av-insurgentes-sur-605-pb-n-parent,
+      .logo-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .av-insurgentes-sur-605-pb-n-parent {
+        gap: var(--gap-base);
+        font-size: var(--paragraph-p02-semi-bold-size);
+      }
+      .av-insurgentes-sur-605-pb-n-parent,
+      .logo-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .av-insurgentes-sur-605-pb-n-parent {
+        gap: var(--gap-base);
+        font-size: var(--paragraph-p02-semi-bold-size);
+      }
+      .av-insurgentes-sur-container {
+        position: relative;
+        line-height: 166%;
+        display: inline-block;
+        width: 405px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: #000000;
+        margin-bottom: 16px;
+      }
+      .av-insurgentes-sur {
+        margin-block-start: 0;
+      }
+      .select-status {
+        display: flex;
+        width: 197px;
+        padding: 6px 12px;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 8px;
+        border: 1px solid var(--grises-700, #505253);
+        color: var(--grises-700, #505253);
+        font-family: "Inter";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+      }
+      .status {
+        color: var(--grises-500, #898c8f);
+        font-family: "Inter";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        width: 275px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    </style>
+    <!-- Media Query  -->
+    <style>
+      @media screen and (max-width: 767px) {
+        body {
+          margin: 0;
+        }
+        .mis-postulaciones {
+          text-align: center;
+          font-size: 32px;
+        }
+        .mis-postulaciones-versin-desk-inner,
+        .frame-container {
+          width: auto;
+          justify-content: center;
+          align-items: center;
+        }
+        .container-btn {
+          flex-direction: column;
+          align-items: center;
+        }
+        .frame-div {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: auto;
+        }
+        .frame-wrapper5 {
+          display: none;
+        }
+        .frame-parent {
+          width: 400px;
+        }
+        .card-vacante {
+          display: flex;
+          height: 291px;
+          width: 268px;
+          padding: 28px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          flex-shrink: 0;
+          border-radius: 8px;
+          background: var(--grises-50, #fcfdfe);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+        }
+        .frame-parent1 {
+          width: auto;
+          justify-content: center;
+        }
+        /* .container-btn-msj {
+          margin-top:43px;
+        } */
+        .hace-30-das {
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: center;
+          gap: 18.5px;
+        }
+        .status {
+          justify-content: center;
+        }
+        .vendedor-tcnico-parent {
+          margin-bottom: 0px;
+        }
+        .frame-parent3,
+        .hace-30-das-parent {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+          width: auto;
+        }
+        .vacantes-similares-parent {
+          width: auto;
+          margin-left: 16px;
+          padding: 3px;
+        }
+        .card-vacante-similares {
+          padding: 16px 24px;
+        }
+        .hace-30-das-same {
+          align-items: flex-end;
+        }
+        .frame-parent2 {
+          padding: 5px 2px;
+        }
+        .check-circle-parent {
+          margin-bottom: 32px;
+        }
+        /* FOOTER  */
+        .frame-parent-footer {
+          width: 400px;
+          justify-content: flex-end;
+          padding-left: 7px;
+        }
+        .div {
+          display: none;
+        }
+        .frame-parent18 {
+          width: 156px;
+        }
+        .facebook-icon {
+          width: 29.5px;
+          height: 28px;
+        }
+        .politica-de-privacidad {
+          color: #000;
+          font-family: "Inter";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .av-insurgentes-sur {
+          color: #000;
+          width: 327px;
+          font-family: "Inter";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        .people-zone {
+          width: auto;
+          color: #000;
+          font-family: "Inter";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: lowercase;
+        }
+        .encuntranos-en-parent {
+          position: relative;
+          top: 100px;
+          right: 177px;
+        }
+        .prestaciones-superiores-a {
+          color: #000;
+          font-family: "Inter";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        .people-zone1 {
+          color: #000;
+          font-family: "Inter";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: lowercase;
+        }
+      }
+    </style>
+  
+  
+    <div class="mis-postulaciones-versin-desk">
+      <div class="mis-postulaciones-versin-desk-inner">
+        <div class="frame-parent">
+          <div class="frame-group">
+            <div class="frame-container">
+              <div class="mis-postulaciones-wrapper">
+                <div class="mis-postulaciones">Mis postulaciones</div>
+              </div>
+              <div class="frame-div">
+                <div class="check-circle-parent">
+                  <img class="check-circle-icon" alt="" src="/content/genpub/assets/check.svg"/>
+
+                  <div class="te-has-postulado-a-5-diferente-wrapper">
+                    <div class="te-has-postulado">
+                      Te has postulado a 5 diferentes vacantes
+                    </div>
+                  </div>
+                </div>
+                <div class="container-btn">
+                  <select class="select-status">
+                    <option>Estado de candidato</option>
+                  </select>
+                  <button class="mensajes-wrapper" type="submit" value="" name="">Mensajes</button>
+
+                  <button class="mensajes-wrapper" type="submit" value="" name="">Continuar busqueda</button>
+                </div>
+              </div>
+            </div>
+            <div class="frame-parent1">
+              <div class="frame-wrapper">
+                <div class="frame-wrapper1" id="frameContainer30">
+                  <div class="frame-parent2">
+                    <div class="ficha-postulacion-wrapper">
+                      <div class="card-vacante">
+                        <div class="hace-30-das" name="Fecha">
+                          <div class="status">En proceso</div>
+                          Te postulaste hace 30 días
+                          <img src="/content/genpub/assets/checkBG.svg" alt="Check"/>
+                        </div>
+                        <div class="hace-30-das-parent">
+                          <div class="frame-parent3">
+                            <div class="vendedor-tcnico-parent">
+                              <div class="vendedor-tcnico" name="Puesto">
+                                Vendedor técnico
+                              </div>
+                              <div class="centro-jalisco" name="Ubicacion">
+                                Centro, Jalisco
+                              </div>
+                              <div class="centro-jalisco" name="Sueldo">
+                                Escolaridad: Licenciatura
+                              </div>
+                              <div class="mxn" name="Sueldo">$5,000 MXN</div>
+                            </div>
+                            <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                              <p class="prestaciones-superiores-a">
+                                Modaliad: Presencial
+                              </p>
+                              <p class="prestaciones-superiores-a">
+                                Experiencia necesaria: 2 años como vendedor
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container-btn-msj">
+                          <button class="msj-btn" type="submit" value="" name="">Mensaje</button>
+                          <button class="delete-btn" type="submit" value="" name="">Eliminar</button>
+                        </div>
+                      </div>
+                      <div class="card-vacante">
+                        <div class="hace-30-das" name="Fecha">
+                          <div class="status">En proceso</div>
+                          Te postulaste hace 30 días
+                          <img src="/content/genpub/assets/checkBG.svg" alt="Check"/>
+                        </div>
+                        <div class="hace-30-das-parent">
+                          <div class="frame-parent3">
+                            <div class="vendedor-tcnico-parent">
+                              <div class="vendedor-tcnico" name="Puesto">
+                                Vendedor técnico
+                              </div>
+                              <div class="centro-jalisco" name="Ubicacion">
+                                Centro, Jalisco
+                              </div>
+                              <div class="centro-jalisco" name="Sueldo">
+                                Escolaridad: Licenciatura
+                              </div>
+                              <div class="mxn" name="Sueldo">$5,000 MXN</div>
+                            </div>
+                            <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                              <p class="prestaciones-superiores-a">
+                                Modaliad: Presencial
+                              </p>
+                              <p class="prestaciones-superiores-a">
+                                Experiencia necesaria: 2 años como vendedor
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container-btn-msj">
+                          <button class="msj-btn" type="submit" value="" name="">Mensaje</button>
+                          <button class="delete-btn" type="submit" value="" name="">Eliminar</button>
+                        </div>
+                      </div>
+                      <div class="card-vacante">
+                        <div class="hace-30-das" name="Fecha">
+                          <div class="status">En proceso</div>
+                          Te postulaste hace 30 días
+                          <img src="/content/genpub/assets/checkBG.svg" alt="Check"/>
+                        </div>
+                        <div class="hace-30-das-parent">
+                          <div class="frame-parent3">
+                            <div class="vendedor-tcnico-parent">
+                              <div class="vendedor-tcnico" name="Puesto">
+                                Vendedor técnico
+                              </div>
+                              <div class="centro-jalisco" name="Ubicacion">
+                                Centro, Jalisco
+                              </div>
+                              <div class="centro-jalisco" name="Sueldo">
+                                Escolaridad: Licenciatura
+                              </div>
+                              <div class="mxn" name="Sueldo">$5,000 MXN</div>
+                            </div>
+                            <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                              <p class="prestaciones-superiores-a">
+                                Modaliad: Presencial
+                              </p>
+                              <p class="prestaciones-superiores-a">
+                                Experiencia necesaria: 2 años como vendedor
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container-btn-msj">
+                          <button class="msj-btn" type="submit" value="" name="">Mensaje</button>
+                          <button class="delete-btn" type="submit" value="" name="">Eliminar</button>
+                        </div>
+                      </div>
+                      <div class="card-vacante">
+                        <div class="hace-30-das" name="Fecha">
+                          <div class="status">En proceso</div>
+                          Te postulaste hace 30 días
+                          <img src="/content/genpub/assets/checkBG.svg" alt="Check"/>
+                        </div>
+                        <div class="hace-30-das-parent">
+                          <div class="frame-parent3">
+                            <div class="vendedor-tcnico-parent">
+                              <div class="vendedor-tcnico" name="Puesto">
+                                Vendedor técnico
+                              </div>
+                              <div class="centro-jalisco" name="Ubicacion">
+                                Centro, Jalisco
+                              </div>
+                              <div class="centro-jalisco" name="Sueldo">
+                                Escolaridad: Licenciatura
+                              </div>
+                              <div class="mxn" name="Sueldo">$5,000 MXN</div>
+                            </div>
+                            <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                              <p class="prestaciones-superiores-a">
+                                Modaliad: Presencial
+                              </p>
+                              <p class="prestaciones-superiores-a">
+                                Experiencia necesaria: 2 años como vendedor
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container-btn-msj">
+                          <button class="msj-btn" type="submit" value="" name="">Mensaje</button>
+                          <button class="delete-btn" type="submit" value="" name="">Eliminar</button>
+                        </div>
+                      </div>
+                      <div class="card-vacante">
+                        <div class="hace-30-das" name="Fecha">
+                          <div class="status">En proceso</div>
+                          Te postulaste hace 30 días
+                          <img src="/content/genpub/assets/checkBG.svg" alt="Check"/>
+                        </div>
+                        <div class="hace-30-das-parent">
+                          <div class="frame-parent3">
+                            <div class="vendedor-tcnico-parent">
+                              <div class="vendedor-tcnico" name="Puesto">
+                                Vendedor técnico
+                              </div>
+                              <div class="centro-jalisco" name="Ubicacion">
+                                Centro, Jalisco
+                              </div>
+                              <div class="centro-jalisco" name="Sueldo">
+                                Escolaridad: Licenciatura
+                              </div>
+                              <div class="mxn" name="Sueldo">$5,000 MXN</div>
+                            </div>
+                            <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                              <p class="prestaciones-superiores-a">
+                                Modaliad: Presencial
+                              </p>
+                              <p class="prestaciones-superiores-a">
+                                Experiencia necesaria: 2 años como vendedor
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container-btn-msj">
+                          <button class="msj-btn" type="submit" value="" name="">Mensaje</button>
+                          <button class="delete-btn" type="submit" value="" name="">Eliminar</button>
+                        </div>
+                      </div>
+                      <div class="card-vacante">
+                        <div class="hace-30-das" name="Fecha">
+                          <div class="status">En proceso</div>
+                          Te postulaste hace 30 días
+                          <img src="/content/genpub/assets/checkBG.svg" alt="Check"/>
+                        </div>
+                        <div class="hace-30-das-parent">
+                          <div class="frame-parent3">
+                            <div class="vendedor-tcnico-parent">
+                              <div class="vendedor-tcnico" name="Puesto">
+                                Vendedor técnico
+                              </div>
+                              <div class="centro-jalisco" name="Ubicacion">
+                                Centro, Jalisco
+                              </div>
+                              <div class="centro-jalisco" name="Sueldo">
+                                Escolaridad: Licenciatura
+                              </div>
+                              <div class="mxn" name="Sueldo">$5,000 MXN</div>
+                            </div>
+                            <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                              <p class="prestaciones-superiores-a">
+                                Modaliad: Presencial
+                              </p>
+                              <p class="prestaciones-superiores-a">
+                                Experiencia necesaria: 2 años como vendedor
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container-btn-msj">
+                          <button class="msj-btn" type="submit" value="" name="">Mensaje</button>
+                          <button class="delete-btn" type="submit" value="" name="">Eliminar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="frame-wrapper5">
+                <div class="da-clic-a-tu-postulacin-parent">
+                  <div class="da-clic-a">Da clic a tu postulación</div>
+                  <img class="frame-icon" alt="" src="/content/genpub/assets/postulacion.svg"/>
+                </div>
+              </div>
+            </div>
+            <div class="vacantes-similares-parent">
+              <div class="vacantes-similares">Vacantes similares</div>
+              <div class="card-vacante-mvil-parent" id="carousel">
+                <div class="card-vacante-similares" id="card">
+                  <div class="hace-30-das-parent">
+                    <div class="hace-30-das-same" name="Fecha">
+                      Hace 30 días
+                    </div>
+                    <div class="frame-parent3">
+                      <div class="vendedor-tcnico-parent">
+                        <div class="vendedor-tcnico" name="Puesto">
+                          Vendedor minorista
+                        </div>
+                        <div class="centro-jalisco" name="Ubicaion">
+                          Centro, Hidalgo
+                        </div>
+                        <div class="centro-jalisco" name="Sueldo">
+                          Escolaridad: No necesaria
+                        </div>
+                        <div class="mxn" name="Sueldo">$12,000 MXN</div>
+                      </div>
+                      <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                        <p class="prestaciones-superiores-a">
+                          Modaliad: Presencial
+                        </p>
+                        <p class="prestaciones-superiores-a">
+                          Experiencia necesaria: 2 años como vendedor
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-vacante-similares" id="card">
+                  <div class="hace-30-das-parent">
+                    <div class="hace-30-das-same" name="Fecha">
+                      Hace 30 días
+                    </div>
+                    <div class="frame-parent3">
+                      <div class="vendedor-tcnico-parent">
+                        <div class="vendedor-tcnico" name="Puesto">
+                          Vendedor minorista
+                        </div>
+                        <div class="centro-jalisco" name="Ubicaion">
+                          Centro, Hidalgo
+                        </div>
+                        <div class="centro-jalisco" name="Sueldo">
+                          Escolaridad: No necesaria
+                        </div>
+                        <div class="mxn" name="Sueldo">$12,000 MXN</div>
+                      </div>
+                      <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                        <p class="prestaciones-superiores-a">
+                          Modaliad: Presencial
+                        </p>
+                        <p class="prestaciones-superiores-a">
+                          Experiencia necesaria: 2 años como vendedor
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-vacante-similares" id="card">
+                  <div class="hace-30-das-parent">
+                    <div class="hace-30-das-same" name="Fecha">
+                      Hace 30 días
+                    </div>
+                    <div class="frame-parent3">
+                      <div class="vendedor-tcnico-parent">
+                        <div class="vendedor-tcnico" name="Puesto">
+                          Vendedor minorista
+                        </div>
+                        <div class="centro-jalisco" name="Ubicaion">
+                          Centro, Hidalgo
+                        </div>
+                        <div class="centro-jalisco" name="Sueldo">
+                          Escolaridad: No necesaria
+                        </div>
+                        <div class="mxn" name="Sueldo">$12,000 MXN</div>
+                      </div>
+                      <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                        <p class="prestaciones-superiores-a">
+                          Modaliad: Presencial
+                        </p>
+                        <p class="prestaciones-superiores-a">
+                          Experiencia necesaria: 2 años como vendedor
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-vacante-similares" id="card">
+                  <div class="hace-30-das-parent">
+                    <div class="hace-30-das-same" name="Fecha">
+                      Hace 30 días
+                    </div>
+                    <div class="frame-parent3">
+                      <div class="vendedor-tcnico-parent">
+                        <div class="vendedor-tcnico" name="Puesto">
+                          Vendedor minorista
+                        </div>
+                        <div class="centro-jalisco" name="Ubicaion">
+                          Centro, Hidalgo
+                        </div>
+                        <div class="centro-jalisco" name="Sueldo">
+                          Escolaridad: No necesaria
+                        </div>
+                        <div class="mxn" name="Sueldo">$12,000 MXN</div>
+                      </div>
+                      <div class="horario-900-1800-prestacion-container" name="Descripcion">
+                        <p class="prestaciones-superiores-a">
+                          Modaliad: Presencial
+                        </p>
+                        <p class="prestaciones-superiores-a">
+                          Experiencia necesaria: 2 años como vendedor
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vector-parent">
+            <div class="vector-Css"></div>
+            <!-- Footer  -->
+            <div class="frame-parent-footer">
+              <div class="encuntranos-en-parent">
+                <b class="div">Encuéntranos en:</b>
+                <div class="frame-parent18">
+                  <div class="facebook-parent">
+                    <img class="facebook-icon" alt="" src="/content/genpub/assets/FB-PZ.svg"/>
+
+                    <div class="people-zone">@People_zone</div>
+                  </div>
+                  <div class="facebook-parent">
+                    <img class="facebook-icon" alt="" src="/content/genpub/assets/TT-PZ.svg"/>
+
+                    <div class="people-zone">@People_zone</div>
+                  </div>
+                  <div class="facebook-parent">
+                    <img class="facebook-icon" alt="" src="/content/genpub/assets/IG-PZ.svg"/>
+
+                    <div class="people-zone">@People_zone</div>
+                  </div>
+                  <div class="facebook-parent">
+                    <img class="facebook-icon" alt="" src="/content/genpub/assets/IN-PZ.svg"/>
+
+                    <div class="people-zone">@People_zone</div>
+                  </div>
+                </div>
+              </div>
+              <div class="logo-parent">
+                <div class="logo">
+                  <img class="capa-1-icon" alt="" src="/content/genpub/assets/PeopleZoneLog.svg"/>
+                </div>
+                <div class="politica-de-privacidad-parent">
+                  <div class="politica-de-privacidad">
+                    Politica de privacidad
+                  </div>
+                  <div class="politica-de-privacidad">Condiciones de uso</div>
+                  <div class="politica-de-privacidad">Preguntas Frecuentes</div>
+                  <div class="politica-de-privacidad">Contacto</div>
+                </div>
+                <div class="av-insurgentes-sur-605-pb-n-parent">
+                  <div class="av-insurgentes-sur-container">
+                    <p class="prestaciones-superiores-a">
+                      Av. Insurgentes Sur #605 PB
+                    </p>
+                    <p class="prestaciones-superiores-a">
+                      Nápoles, Benito Juárez C.P 03810, Ciudad de México
+                    </p>
+                  </div>
+                  <div class="people-zone1">
+                    Copyrigth © 2022 Peoplezone Powered by: Peoplezone
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const carousel = document.getElementById("carousel");
+      let isMouseDown = false;
+      let startX;
+      let scrollLeft;
+
+      carousel.addEventListener("mousedown", (e) => {
+        isMouseDown = true;
+        carousel.classList.add("grabbing");
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      carousel.addEventListener("mouseleave", () => {
+        isMouseDown = false;
+        carousel.classList.remove("grabbing");
+      });
+
+      carousel.addEventListener("mouseup", () => {
+        isMouseDown = false;
+        carousel.classList.remove("grabbing");
+      });
+
+      carousel.addEventListener("mousemove", (e) => {
+        if (!isMouseDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 3;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+    </script>
+  
